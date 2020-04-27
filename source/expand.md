@@ -16,12 +16,11 @@ date: 2020-04-24 10:30:20
 ```yaml
 lazyload:
   enable: true
-  js: https://cdn.jsdelivr.net/npm/vanilla-lazyload@15.1.1/dist/lazyload.min.js
   onlypost: false
   loadingImage: 
 ```
 
-默认调用 [Vanilla lazyload](https://github.com/verlok/lazyload)。
+默认调用 [Vanilla lazyload](https://github.com/verlok/lazyload)，可以在主题配置文件 CDN 设置处修改。
 
 ## jQuery
 
@@ -32,8 +31,9 @@ lazyload:
 ```yaml
 jquery: 
   enable: true
-  js: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
 ```
+
+资源调用可以前往主题配置文件 CDN 设置处修改，默认使用 jsDelivr 公共 CDN 库加载。
 
 ## fancybox
 
@@ -45,8 +45,6 @@ jquery:
 fancybox: 
   enable: true
   auto: false
-  css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-  js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
 ```
 
 设置 `enable: true` 开启fancybox。默认不应用到所有图片，请在需要使用 fancybox 的包裹在 `<fancybox>` 标记内，例如：
@@ -58,3 +56,5 @@ fancybox:
 ```
 
  而如果将 `auto: true` 开启，则自动应用到所有图片，无需包裹在 `<fancybox>` 内。
+
+fancybox CSS 及 fancybox JS 默认采用 jsDelivr 公共 CDN 加载，可以前往主题配置文件 CDN 设置处修改。

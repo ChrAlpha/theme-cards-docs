@@ -8,7 +8,7 @@ date: 2020-04-24 10:30:08
 
 # Theme Cards
 
-【图 | 多设备带壳截图】
+![](/assets/img/coverpic.png)
 
 {% note success%}
 
@@ -24,7 +24,7 @@ date: 2020-04-24 10:30:08
 
 ### 简洁
 
-【图 | ChrAlpha 首页截图】
+![](/assets/img/snips.png)
 
 在眼花缭乱的互联网上，找回本初那颗记录的心。
 
@@ -34,9 +34,7 @@ date: 2020-04-24 10:30:08
 
 ### 快速
 
-【图 | Google Website Speed Insights】
-
-【图 | GTmetrix.com】
+![](/assets/img/google-speed-house.png)
 
 不到 50KB 的页面，默认无需依赖任何 JavaScript 便可运行，资源只在需要的时候才被加载，为的就是我们最看重的性能。
 
