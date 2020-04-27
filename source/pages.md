@@ -33,7 +33,7 @@ hexo new page "tags"
 
 ```yaml
 ---
-layout: tags
+layout: tag
 ---
 ```
 
@@ -51,7 +51,7 @@ hexo new page "categories"
 
 ```yaml
 ---
-layout: categories
+layout: category
 ---
 ```
 
@@ -59,23 +59,7 @@ layout: categories
 
 ## 文章归档
 
-一般情况下，我们希望分类页面路径在 `/archives/` 下（除非你更改过主题配置文件中 `archive_dir` 参数），所以使用下述命令新建页面。
-
-```bash
-hexo new page "archives"
-```
-
-在新增文件 `front-matter` 中添加以下内容，即定义此页面为标签页面。
-
-```yaml
----
-layout: archives
----
-```
-
-在该归档页面会显示所有文章，按发布时间排序整理为时间轴。
-
->   除此以外，Hexo 还会默认将文章 **按月归档**。例如一篇 2020 年 4 月 30 号发布的文章将归档至 `/archives/2020/04/` 页面下。
+一般情况下，Hexo 会默认讲文章按照发布日期归档，在 `/archives/` 下。除此以外，Hexo 还会默认将文章 **按月归档**。例如一篇 2020 年 4 月 30 号发布的文章将归档至 `/archives/2020/04/` 页面下。
 
 ## 友情链接
 
