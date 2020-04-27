@@ -20,7 +20,7 @@
         <div class="navbar-menu">
             <div class="navbar-start">
                 <% for (const link of navbar) { %>
-                    <a class="navbar-item" href="<%= url_for(link.url) %>">
+                    <a class="navbar-item" href="<%= url_for(link.url) %>" target="_blank">
                         <% if (link.logo) { %>
                             <span class="icon">
                                 <i class="<%= link.logo %>"></i>

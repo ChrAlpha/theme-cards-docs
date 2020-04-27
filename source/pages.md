@@ -33,7 +33,7 @@ hexo new page "tags"
 
 ```yaml
 ---
-layout: tag
+layout: tags
 ---
 ```
 
@@ -51,7 +51,7 @@ hexo new page "categories"
 
 ```yaml
 ---
-layout: category
+layout: categories
 ---
 ```
 
