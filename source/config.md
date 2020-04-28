@@ -130,7 +130,7 @@ box:
 
 ### color
 
-颜色样式设置，从上往下依次是：主颜色、链接颜色、链接选中时颜色、标题颜色、背景颜色、卡片背景颜色、字体颜色、代码块背景颜色、分类标记背景颜色、标签标记背景颜色、footer 文字颜色。
+颜色样式设置，从上往下依次是：主颜色、链接颜色、链接选中时颜色、标题颜色、背景颜色、卡片背景颜色、字体颜色、代码块背景颜色、分类标记背景颜色、标签标记背景颜色、footer 文字颜色、footer 链接颜色。
 
 ```yaml
 color: 
@@ -145,6 +145,7 @@ color:
   categories_block: '#c2c2c2'
   tags_block: '#f4f4f4'
   footer_text: '#999'
+  footer_link: '#6c6c6c'
 ```
 
 ![](/assets/img/style-color-space.png)
@@ -250,9 +251,7 @@ copyright:
     - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
 ```
 
-【图 | copyright 组件】
-
-可在 `front-matter` 中关闭指定页面的展示。
+可在 `front-matter` 中关闭指定页面的 copyright 组件展示。
 
 ```yaml
 copyright: false

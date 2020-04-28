@@ -7,11 +7,11 @@ date: 2020-04-24 10:30:20
 
 
 
-以简洁、速度为重的「Cards」仍内置了一些服务，可以在主题配置文件内的 `optimize` 下调整。
+以简洁、速度为重的「Cards」仍内置了一些拓展插件，可以在主题配置文件内的 `optimize` 下调整。
 
-## 图片 Lazyload
+## Lazyload
 
-「Cards」自带图片 Lazyload 的 helper，你无需再安装其他插件，如果你执意安装可能带来难以预计的错误。至于启用，你需要将 `optimize` 下的 `lazyload` 条目复制粘贴到站点配置文件中并对应修改即可。
+「Cards」自带图片 Lazyload 的 helper，你无需再安装其他插件。至于启用，你需要将 `optimize` 下的 `lazyload` 条目复制粘贴到站点配置文件中并对应修改即可。
 
 ```yaml
 lazyload:
