@@ -64,17 +64,19 @@ Valine 是一款基于 LeanCloud 的评论系统。
 ```yaml
 valine:
   enable: true
-  app_id: 
-  app_key: 
-  guest_info: nick,mail,link 
-  placeholder: just go!
-  avatar: '' 
-  pageSize: 8 
-  verify: 
-  notify: 
+  appId: 
+  appKey: 
+  meta: ['nick', 'mail', 'link']
+  requiredFields: []
+  path: 
+  placeholder: 'just go!'
+  avatar: 
+  pageSize: 
   lang: 
   highlight: 
-  visitor: 
+  recordIP: 
+  emojiCDN: 
+  emojiMaps: {}
 ```
 
 你可以阅读 Valine 文档中的 [快速开始](https://valine.js.org/quickstart.html) 与 [配置项](https://valine.js.org/configuration.html) 了解相关参数细节。一般情况下，你只需要一个 LeanCloud 账号即可。
