@@ -20,19 +20,18 @@ jobs:
           npm install hexo-cli --global
           mkdir ~/theme-cards-docs
           cd ~/theme-cards-docs
-          mkdir ./push
           git clone https://github.com/ChrAlpha/theme-cards-docs.git docs
           git clone https://github.com/ChrAlpha/theme-cards-docs.git demo
-          cd ./demo
-          git checkout demo
-          npm install
-          hexo clean && hexo generate
-          cp -rf ./public ../push/demo
-          cd ../docs
+          cd ./docs
           git checkout master
           npm install
           hexo clean && hexo generate
           cp -rf ./public ../push
+          cd ../demo
+          git checkout demo
+          npm install
+          hexo clean && hexo generate
+          cp -rf ./public ../push/demo
           cd ../push
           git init
           git add . && git commit -m "Documents Continuous Deployment"
