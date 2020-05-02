@@ -9,7 +9,7 @@ date: 2020-04-24 10:30:20
 
 ## Mathjax
 
-由于部分 LaTeX 语法会与 Markdown 语法冲突，此时最简单的方法是更换渲染器。
+由于部分 LaTeX 语法会与 Markdown 语法冲突，此时最简单的方法是更换有针对优化过的渲染器。
 
 ```bash
 npm uninstall hexo-renderer-marked --save
@@ -38,10 +38,14 @@ markdown_it_plus:
 最后在需要渲染数学公式的文章 `front-matter` 中添加：
 
 ```yaml
+---
 mathjax: true
+---
 ```
 
 [hexo-renderer-markdown-it-plus](https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus) 
+
+>   如果你之前有更换过渲染器，请根据自身实际情况调整。
 
 ## Lazyload
 

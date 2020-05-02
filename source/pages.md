@@ -23,7 +23,7 @@ layout: post
 
 ## 标签云
 
-一般情况下，我们希望标签云路径在 `/tags/` 下（除非你更改过主题配置文件中 `tag_dir` 参数），所以要在`./source/tags/`文件夹中新建 `index.md`。使用以下命令即可：
+一般情况下，我们希望标签云路径在 `/tags/` 下（除非你更改过主题配置文件中 `tag_dir` 参数），所以要在 `./source/tags/` 文件夹中新建 `index.md`。使用以下命令即可：
 
 ```bash
 hexo new page "tags"
@@ -41,7 +41,7 @@ layout: tag
 
 ## 分类一览
 
-一般情况下，我们希望分类页面路径在 `/categories/` 下（除非你更改过主题配置文件中 `category_dir` 参数），所以使用下述命令新建页面。
+一般情况下，我们希望标签云路径在 `/categories/` 下（除非你更改过主题配置文件中 `categories_dir` 参数），所以要在 `./source/categories/` 文件夹中新建 `index.md`。使用以下命令即可：
 
 ```bash
 hexo new page "categories"
