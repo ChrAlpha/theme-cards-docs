@@ -7,11 +7,45 @@ date: 2020-04-24 10:30:20
 
 
 
-以简洁、速度为重的「Cards」仍内置了一些拓展插件，可以在主题配置文件内的 `optimize` 下调整。
+## Mathjax
+
+由于部分 LaTeX 语法会与 Markdown 语法冲突，此时最简单的方法是更换渲染器。
+
+```bash
+npm uninstall hexo-renderer-marked --save
+
+npm install hexo-renderer-markdown-it-plus --save
+```
+
+然后在站点配置文件中添加：
+
+```yaml
+markdown_it_plus:
+  highlight: true
+  html: true
+  xhtmlOut: true
+  breaks: true
+  langPrefix:
+  linkify: true
+  typographer: true
+  quotes: ‘’“”
+  plugins:
+    - plugin:
+      name: markdown-it-mark
+      enable: false
+```
+
+最后在需要渲染数学公式的文章 `front-matter` 中添加：
+
+```yaml
+mathjax: true
+```
+
+[hexo-renderer-markdown-it-plus](https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus) 
 
 ## Lazyload
 
-「Cards」自带图片 Lazyload 的 helper，你无需再安装其他插件。至于启用，你需要将 `optimize` 下的 `lazyload` 条目复制粘贴到站点配置文件中并对应修改即可。
+「Cards」自带图片 Lazyload 的 helper，你无需再安装其他插件。至于启用，你需要将「`optimize` - `lazyload`」条目复制粘贴到站点配置文件中并对应修改即可。
 
 ```yaml
 lazyload:
@@ -39,7 +73,7 @@ jquery:
 
 图片点击放大插件，可以前往 Demo 中的图片测试页面查看效果。由于「Cards」定制了自己的 Lazyload 功能，所以即便开启图片懒加载也能很好地兼容 fancybox。
 
-由于此插件依赖 jQuery，如需使用请务必确保已经开启 jQuery。
+在「`optimize` - `fancybox`」中启用。由于此插件依赖 jQuery，如需使用请务必确保已经开启 jQuery。
 
 ```yaml
 fancybox: 
@@ -47,11 +81,11 @@ fancybox:
   auto: false
 ```
 
-设置 `enable: true` 开启fancybox。默认不应用到所有图片，请在需要使用 fancybox 的包裹在 `<fancybox>` 标记内，例如：
+设置 `enable: true` 开启 fancybox。默认不应用到所有图片，请在需要使用 fancybox 的包裹在 `<fancybox>` 标记内，例如：
 
 ```
 <fancybox>
-![](https://...)
+![](path/to/image)
 </fancybox>
 ```
 
