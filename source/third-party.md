@@ -66,8 +66,8 @@ valine:
   enable: true
   appId: 
   appKey: 
-  meta: ['nick', 'mail', 'link']
-  requiredFields: []
+  meta: nick,mail,link
+  requiredFields: nick,mail
   path: 
   placeholder: 'just go!'
   avatar: 
@@ -76,7 +76,9 @@ valine:
   highlight: 
   recordIP: 
   emojiCDN: 
-  emojiMaps: {}
+  emojiMaps: 
+    xxx: xxx.jpg
+    ...
 ```
 
 你可以阅读 Valine 文档中的 [快速开始](https://valine.js.org/quickstart.html) 与 [配置项](https://valine.js.org/configuration.html) 了解相关参数细节。一般情况下，你只需要一个 LeanCloud 账号即可。

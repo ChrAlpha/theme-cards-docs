@@ -82,8 +82,9 @@ links:
   - name: ChrAlpha Blog
     url: https://chralpha.com
     avatar: https://cdn.jsdelivr.net/npm/chrdnx@1.0.10/img/head-round.png
+    target: _blank
     backgroundColor: '#fff'
     textColor: '#444'
 ```
 
-其中背景颜色（backgroundColor）与文字颜色（textColor）可选。
+其中背景颜色（backgroundColor）、文字颜色（textColor）可选；`target` 为链接打开方式，默认为 `_blank` 即 **新建标签页打开**，当然你可以设置为 `_self` 即 **当前标签页打开**。
