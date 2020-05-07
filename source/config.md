@@ -187,7 +187,7 @@ font:
 
 ## Meta
 
-设置譬如默认文章标题、日期格式、文章尾部版权声明、自定义 footer 等信息格式。
+设置譬如默认文章标题、日期格式、文章摘要、文章尾部版权声明、自定义 footer 等信息格式。
 
 ### title
 
@@ -231,6 +231,18 @@ date:
 updated:
   title: '最后更新于：'	# 展示在更新日期前的描述
   format: 'YYYY-MM-DD'	# 日期格式 http://momentjs.com/docs/
+```
+
+### auto_excerpt
+
+文章默认摘要，可以（且推荐）使用 `<!--more-->` 标记精确截取文章部分作为摘要。
+
+如果你没有设置 `<!--more-->` 标记且没有设置页面 `description` 参数，则会根据 `auto_excerpt` 是否启用来决定截取指定字数的摘要。
+
+```yaml
+auto_excerpt: 
+  enable: true
+  length: 150
 ```
 
 ### copyright
