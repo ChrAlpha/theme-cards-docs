@@ -7,14 +7,6 @@ date: 2020-04-24 10:30:08
 
 请使用 Notepad++，VS Code，Vim 等编辑器打开主题配置文件。对于 Windows 用户，**不建议** 使用自带记事本打开配置文件，因为可能会带来难以预测的编码错误。
 
-## CDN
-
-主题所采用的CDN。
-
-通常使用 CDN 加载静态文件能使站点访问更快且更稳定，主题默认开启 CDN 加载主要 CSS 文件 `style.css`。如果你对样式进行了一定程度的修改，请关闭 CDN 或者更改为对应 CDN 配置，**否则修改不会生效**！
-
-部分第三方服务也需要使用 CDN 加载资源，详见 [第三方服务](/third-party/) 及 [拓展插件](/expand/)。
-
 ## Head
 
 生成 HTML 的头部信息 `<head>`。
@@ -313,3 +305,224 @@ layout:
 ![](/assets/img/post-header-footer.png)
 
 我们认为文章的标题、内容等元素是必要的，所以没有提供选项，而是 **默认开启**。
+
+## CDN
+
+使用 CDN 获取所需的静态资源通常能使请求更加快速、稳定。而主题默认采用 [jsDelivr](https://www.jsdelivr.com)（国内备案，网宿接入，100 SLA，在全球范围内都有很不错的速度），当然你也可以自行选择其他公共 CDN。
+
+此方面配置请在主题配置文件中定位到 `vendors` 并修改相应配置。
+
+### style
+
+[https://github.com/ChrAlpha/hexo-theme-cards](https://github.com/ChrAlpha/hexo-theme-cards)
+
+主题默认 CSS 文件，如果你有自定义 `style` ，请务必替换为相应的 CDN 地址或者将此项留空。
+
+**jsDelivr**
+
+```yaml
+style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css
+```
+
+**UNPKG**
+
+```yaml
+style: https://unpkg.com/hexo-theme-cards@0.1/dist/css/style.min.css
+```
+
+### highlight
+
+目前仅支持默认代码高亮，如果你有修改 `source/github.min.css`，也请替换为相应的 CDN 地址或者将此项留空。
+
+**jsDelivr**
+
+```yaml
+highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css
+```
+
+**UNPKG**
+
+```yaml
+highlight: https://unpkg.com/hexo-theme-cards@0.1/dist/css/github.min.css
+```
+
+### lazyload
+
+Vanilla-Lazyload 12.0.0 [https://github.com/verlok/lazyload](https://github.com/verlok/lazyload)
+
+主题内置图片 Lazyload 功能，默认调用 Vanilla Lazyload。
+
+详见 [https://theme-cards.ichr.me/expand/#Lazyload](/expand/#Lazyload)
+
+**jsDelivr**
+
+```yaml
+lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js
+```
+
+**UNPKG**
+
+```yaml
+lazyload: https://unpkg.com/vanilla-lazyload@12.0.0/dist/lazyload.min.js
+```
+
+**cdnjs**
+
+```yaml
+lazyload: https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.0/lazyload.min.js
+```
+
+**css.net**
+
+```yaml
+lazyload: https://cdnjs.loli.net/ajax/libs/vanilla-lazyload/12.0.0/lazyload.min.js
+```
+
+### valine
+
+[https://github.com/xcss/Valine](https://github.com/xcss/Valine) [https://valine.js.org/](https://valine.js.org/)
+
+Valine 评论系统。
+
+详见 [https://theme-cards.ichr.me/third-party/#Valine](/third-party/#Valine)
+
+**jsDelivr**
+
+```yaml
+valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js
+```
+
+**UNPKG**
+
+```yaml
+valine: https://unpkg.com/valine@1.4.14/dist/Valine.min.js
+```
+
+**cdnjs**
+
+```yaml
+valine: https://cdnjs.cloudflare.com/ajax/libs/valine/1.4.14/Valine.min.js
+```
+
+**css.net**
+
+```yaml
+valine: https://cdnjs.loli.net/ajax/libs/valine/1.4.14/Valine.min.js
+```
+
+### wildfire
+
+[https://github.com/cheng-kang/wildfire](https://github.com/cheng-kang/wildfire/) [https://wildfire.js.org](https://wildfire.js.org/)
+
+Wildfire 评论系统。
+
+详见 [https://theme-cards.ichr.me/third-party/#Wildfire](/third-party/#Wildfire)
+
+**jsDelivr**
+
+```yaml
+wildfire: https://cdn.jsdelivr.net/npm/wildfire@0.3.9/dist/wildfire.auto.js
+```
+
+**UNPKG**
+
+```yaml
+wildfire: https://unpkg.com/wildfire@0.3.9/dist/wildfire.auto.js
+```
+
+### busuanzi 
+
+[https://busuanzi.ibruce.info](https://busuanzi.ibruce.info)
+
+不蒜子计数系统。
+
+详见 [https://theme-cards.ichr.me/third-party/#不蒜子](https://theme-cards.ichr.me/third-party/#不蒜子)
+
+>   此项默认从官方 CDN 而非 jsDelivr 加载。
+
+**官方 CDN**
+
+```yaml
+busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+```
+
+**jsDelivr**
+
+```yaml
+busuanzi: https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js
+```
+
+**UNPKG**
+
+```yaml
+busuanzi: https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js
+```
+
+### jQuery
+
+jQuery 3.4.1 [https://github.com/jquery/jquery/](https://github.com/jquery/jquery/) [https://jquery.com/](https://jquery.com/)
+
+详见 [https://theme-cards.ichr.me/expand/#jQuery](https://theme-cards.ichr.me/expand/#jQuery) 
+
+**jsDelivr**
+
+```yaml
+jquery: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
+```
+
+**UNPKG**
+
+```YAML
+jquery: https://unpkg.com/jquery@3.4.1/dist/jquery.min.js
+```
+
+**cdnjs**
+
+```yaml
+jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
+```
+
+**css.net**
+
+```yaml
+jquery: https://cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js
+```
+
+### fancybox
+
+fancybox 3.5.7 [https://github.com/fancyapps/fancybox/](https://github.com/fancyapps/fancybox/) [https://fancyapps.com/fancybox/3/](https://fancyapps.com/fancybox/3/) 
+
+详见 [https://theme-cards.ichr.me/expand/#fancybox](https://theme-cards.ichr.me/expand/#fancybox)
+
+**jsDelivr**
+
+```yaml
+fancybox: 
+  css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+  js: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+```
+
+**UNPKG**
+
+```yaml
+fancybox: 
+  css: https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+  js: https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
+```
+
+**cdnjs**
+
+```yaml
+fancybox: 
+  css: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
+  js: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
+```
+
+**css.net**
+
+```yaml
+fancybox: 
+  css: https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css
+  js: https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js
+```
+
