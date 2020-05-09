@@ -130,7 +130,7 @@ color:
   title: '#50596c'				# 标题颜色
   background: '#f4f4f4'			# 背景颜色
   card_color: '#fff'			# 卡片背景颜色
-  font_color: '#444'			# 字体颜色
+  font_color: '#4c4d4e'			# 字体颜色
   codeblock: '#fffbf3'			# 代码块背景颜色
   categories_block: '#c2c2c2'	# 分类标记背景颜色
   tags_block: '#f4f4f4'			# 标签标记背景颜色
@@ -237,6 +237,22 @@ auto_excerpt:
   length: 150
 ```
 
+### toc
+
+文章目录，展示在文章页面侧边栏，支持 h2 ~ h5 级标题（不支持 h1）。
+
+```yaml
+toc: 
+  enable: true
+  list_number: false
+```
+
+`list_number` 用于控制是否显示编号。
+
+在开启此处全局开关后，仍需在 `layout.post.side` 中添加 `toc` 这一项。而即便全局开启，也可在特定页面 [Front-matter](/write/#Front-matter) 中关闭 ToC 展示。
+
+>   不支持 h1 是经过考量的。无论是为了 SEO 还是为了文章层次性，都不建议在一个页面中添加多个 h1 标题，而文章 title 已是一个 h1 标题。
+
 ### copyright
 
 版权声明，若开启将默认文章板块最下方。
@@ -298,6 +314,8 @@ layout:
       - copyright
       - updated
       - tags
+    side: 
+      - toc
 ```
 
 ![](/assets/img/post-list-meta.png)
