@@ -96,3 +96,15 @@ fancybox:
  而如果将 `auto: true` 开启，则自动应用到所有图片，无需包裹在 `<fancybox>` 内。
 
 fancybox CSS 及 fancybox JS 默认采用 jsDelivr 公共 CDN 加载，可以前往主题配置文件 CDN 设置处修改。
+
+## back_to_top
+
+回到顶部按钮，提供两种方案，分别是引入 JavaScript 实现的平滑滚动回到顶部和直接页内链接 `#` 直接返回顶部。
+
+```yaml
+back_to_top: 
+  enable: true
+  smoothly: true
+```
+
+`smoothly` 参数控制着返回顶部实现方式：开启时引入 JavaScript 实现的平滑滚动回到顶部（`smoothly: true`），滑动体验优秀；关闭则是直接页内链接 `#` 直接返回顶部，虽然动效割裂，但无需再引入外部 JS（`smoothly: false`）。
