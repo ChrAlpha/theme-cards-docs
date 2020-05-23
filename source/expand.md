@@ -107,4 +107,4 @@ back_to_top:
   smoothly: true
 ```
 
-`smoothly` 参数控制着返回顶部实现方式：开启时引入 JavaScript 实现的平滑滚动回到顶部（`smoothly: true`），滑动体验优秀；关闭则是直接页内链接 `#` 直接返回顶部，虽然动效割裂，但无需再引入外部 JS（`smoothly: false`）。
+`smoothly` 参数控制着返回顶部实现方式：开启时引入 JavaScript 实现的平滑滚动回到顶部（`smoothly: true`），滑动体验优秀；关闭则是页内链接 `#` 直接返回顶部，虽然动效割裂，但无需再引入外部 JS（`smoothly: false`）。

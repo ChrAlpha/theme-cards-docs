@@ -29,15 +29,19 @@ favicon: https://cdn.jsdelivr.net/npm/chrdnx@1.0.5/icon/favicon-32-transparent.p
 
 ### opengraph
 
-社交链接分享协议，开启后在国外社交平台（Twitter、Facebook、Telegram 等）粘贴文章链接便能自动生成分享卡片。
+社交链接分享协议，开启后某些社交平台（如 Twitter、Facebook、Telegram 等）粘贴文章链接便能自动生成分享卡片。也有助于爬虫更好地理解你的内容。
 
 ```yaml
 opengraph: 
   enable: true
-  tc_type: summary_large_image
+  type: 
+  twitter_card: summary_large_image
+  twitter_id: 
+  twitter_site: 
+  image: page.thumbnail
+  fb_admins: 
+  fb_app_id: 
 ```
-
-其中 `tc_type` 即 Twitter Card Type，可参照 Twitter [官方文档](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) 了解详情。
 
 ### custom_text
 
@@ -52,7 +56,7 @@ custom_head:
 
 ## Cover
 
-封面配置，默认显示在除了文章页的任何页面顶部。
+封面配置，默认显示在除了文章页以外任何页面顶部，以及文章页的底部。
 
 ### sitename
 
@@ -174,8 +178,15 @@ space:
 ```yaml
 font: 
   base_fontsize: 16px
-  line_height: '1.8' 
+  code_fontsize: 14px
+  toc_fontsize: 14px
+  line_height: '1.75'
 ```
+
+-   `base_fontsize` ：默认字体大小
+-   `code_fontsize` ：代码字体大小
+-   `toc_fontsize` ：目录字体大小
+-   `line_height` ：行距
 
 ## Meta
 
@@ -225,6 +236,18 @@ updated:
   format: 'YYYY-MM-DD'	# 日期格式 http://momentjs.com/docs/
 ```
 
+### expire
+
+博文也许具备一定时效性，你可以打开 `expire` 自动为距今超过一定时间的文章添加过时提醒。
+
+```yaml
+expire: 
+  enable: true
+  duration: 120
+```
+
+其中 duration 单位为「天」。
+
 ### auto_excerpt
 
 文章默认摘要，可以（且推荐）使用 `<!--more-->` 标记精确截取文章部分作为摘要。
@@ -261,9 +284,6 @@ toc:
 copyright: 
   enable: true
   
-  # 永久链接前的描述
-  permalink: '本文链接：'
-  
   # 在作者声明和永久链接之间，可以多行，支持 markdown
   custom_text:
     - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
@@ -285,8 +305,6 @@ footer:
   - 'Copyright © 2020 '
   - 'Powered by [Hexo](https://hexo.io) | Theme - [Cards](https://github.com/ChrAlpha/hexo-theme-cards)'
 ```
-
-如果你喜欢「Cards」，非常欢迎在 footer 中保留主题信息，让更多人了解本主题。感谢支持！
 
 ## Layout
 
