@@ -114,10 +114,10 @@ menu:
 
 ```yaml
 box: 
-  max_width: 800px		# 内容板块最大宽度
-  sp_width: 1540px		# 当屏幕宽度大于 2200px 时替代 max_width
-  max_width_logo: 600px	# logo 最大宽度
-  link_item: 16rem		# 友链盒子最大宽度
+  max_width: 800px		 # 内容板块最大宽度
+  sp_width: 1540px		 # 当屏幕宽度大于 2200px 时替代 max_width
+  max_width_logo: 600px	 # logo 最大宽度
+  link_item: 16rem		 # 友链盒子最大宽度
 ```
 
 >   根据谷歌发布的排版指南，不建议主要内容板块每行超过 80 个字宽（也就是 40 个汉字），否则过宽的内容可能会导致读者阅读负担上升。所以上述内容板块最大宽度也不应设置过大。
@@ -165,8 +165,7 @@ radius:
 ```yaml
 space: 
   main: 3.5rem
-  s_main: 2rem	# 当屏幕宽度小于 700px 时候启用
-  sm_main: 1rem	# 当屏幕宽度小于 450px 时候启用
+  sm_main: 1.5rem	# 当屏幕宽度小于 650px 时候启用
 ```
 
 ![](/assets/img/style-color-space.png)
@@ -284,7 +283,7 @@ toc:
 copyright: 
   enable: true
   
-  # 在作者声明和永久链接之间，可以多行，支持 markdown
+  # 在作者声明和永久链接之后，可以多行，支持 markdown
   custom_text:
     - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
 ```
