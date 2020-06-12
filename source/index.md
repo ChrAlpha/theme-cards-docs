@@ -60,4 +60,4 @@ date: 2020-04-24 10:30:08
 
 [Theme Cards](https://github.com/ChrAlpha/hexo-theme-cards) 采用 GPL-3.0 协议进行开源，本文档基于 [Hexo](https://hexo.io/) 构建，采用专为文档设计的主题 [Doku](https://github.com/SukkaW/hexo-theme-doku) 渲染，静态页面托管于 GitHub Page。
 
-特别感谢 [Spencer](https://github.com/spencerwooo) 无私地提供样式指导，为本主题后续上线及开源事宜创造有利条件。
+特别感谢 [Spencer](https://github.com/spencerwooo) 无私地提供样式指导，为本主题后续上线及开源事宜奠基。
