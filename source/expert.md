@@ -1,3 +1,10 @@
+---
+title: 进阶使用
+type: docs
+permalink: expert/
+date: 2020-06-13 14:30:08
+---
+
 ## 使用 Git 管理 Hexo
 
 正如 [开始使用](/start/) 中提到的，我们建议使用 git 获取主题文件，以便第一时间跟进新版本。

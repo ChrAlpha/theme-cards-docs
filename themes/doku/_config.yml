@@ -28,9 +28,10 @@ sidebar:
       items:
         - 开始使用 | start/
         - 基本配置 | config/
-        - 页面配置 | pages/
         - 第三方服务 | third-party/
         - 拓展插件 | expand/
+        - 进阶使用 | expert/
+        - 独立页面 | pages/
         - 开始创作 | write/
     changelog: # 另一个文档类型，以下配置的侧边栏内容只会在 zh-CN 语言、类型为「changelog」的页面下显示
       level: 1 # 一级侧边栏
