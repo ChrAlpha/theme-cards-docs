@@ -110,55 +110,25 @@ menu:
 
 用于控制站点自定义样式。再次提醒：如需自定义样式，请关闭默认 CDN 或更改对应 CDN 配置！
 
-### box
-
-设置内容板块最大宽度、logo 最大宽度及友链盒子最大宽度。
-
-```yaml
-box: 
-  max_width: 800px		 # 内容板块最大宽度
-  sp_width: 1540px		 # 当屏幕宽度大于 2200px 时替代 max_width
-  max_width_logo: 600px	 # logo 最大宽度
-  link_item: 16rem		 # 友链盒子最大宽度
-```
-
->   根据谷歌发布的排版指南，不建议主要内容板块每行超过 80 个字宽（也就是 40 个汉字），否则过宽的内容可能会导致读者阅读负担上升。所以上述内容板块最大宽度也不应设置过大。
+>   添加过多自定义样式在主题配置文件中，愿意调整的人少之又少，还容易使人混淆，得不偿失。于是决定在「Cards」v0.6 中删除了绝大多数自定义项。当然，你依旧可以前往 `cards/source/css/_/defines.styl` 中进行自定义
 
 ### color
 
-颜色样式设置，从上往下依次是：主颜色、链接颜色、链接选中时颜色、标题颜色、背景颜色、卡片背景颜色、字体颜色、代码块背景颜色、分类标记背景颜色、标签标记背景颜色、网站页脚文字颜色、网站页脚链接颜色。
+主要颜色样式，控制导航按钮、ToC、归档页面选中下划线颜色。
 
 ```yaml
 color: 
-  main_color: '#ffb90f'			# 主颜色
-  link_color: '#ffb90f'			# 链接颜色
-  link_color_hover: '#eb5757'	# 链接选中时颜色
-  title: '#50596c'				# 标题颜色
-  background: '#f4f4f4'			# 背景颜色
-  card_color: '#fff'			# 卡片背景颜色
-  font_color: '#4c4d4e'			# 字体颜色
-  codeblock: '#fffbf3'			# 代码块背景颜色
-  categories_block: '#c2c2c2'	# 分类标记背景颜色
-  tags_block: '#f4f4f4'			# 标签标记背景颜色
-  footer_text: '#999'			# 网站页脚文字颜色
-  footer_link: '#6c6c6c'		# 网站页脚链接颜色
+  main_color: '#ffb90f'
 ```
-
-![](/assets/img/style-color-space.png)
-
-![](/assets/img/style-color-button-footer.png)
 
 ### radius
 
-设置卡片及按钮的边框圆角半径。
+圆角设置，控制卡片圆角半径。
 
 ```yaml
 radius: 
-  main: 5px
-  button: 5px
+  main_radius: 5px
 ```
-
-![](/assets/img/style-radius.png)
 
 ### space
 
@@ -166,28 +136,9 @@ radius:
 
 ```yaml
 space: 
-  main: 3.5rem
-  sm_main: 1.5rem	# 当屏幕宽度小于 650px 时候启用
+  main_space: 3.5rem
+  sm_space: 1.5rem	# 当屏幕宽度小于 650px 时候启用
 ```
-
-![](/assets/img/style-color-space.png)
-
-### font
-
-字体设置。
-
-```yaml
-font: 
-  base_fontsize: 16px
-  code_fontsize: 14px
-  toc_fontsize: 14px
-  line_height: '1.75'
-```
-
--   `base_fontsize` ：默认字体大小
--   `code_fontsize` ：代码字体大小
--   `toc_fontsize` ：目录字体大小
--   `line_height` ：行距
 
 ## Meta
 

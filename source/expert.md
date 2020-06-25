@@ -37,7 +37,7 @@ git clone --recurse-submodules https://github.com/ChrAlpha/[website source].git
 
 >   「Cards」v0.5 最重要更新，请确保你使用的主题版本不低于 `0.5.0`。
 
-基于 Hexo 3.0 新增「数据文件」特性，无需直接更改主题 `_config.yml` 便可达到相同效果。
+基于 Hexo 3.0 新增「数据文件」特性，无需直接更改主题 `_config.yml` 便可达到相同效果。以此使得主题配置文件的修改可存储与主题文件夹外，方便直接使用 Git 管理主题版本，而无需每次更新手动更改主题配置文件。
 
 在**站点根目录**下创建 `source/_data/cards.yml`（若 `source/_data` 目录不存在，请新建）。并将你需要修改的内容填写至此（**无需**复制整个主题配置文件），根据约定，这里的内容将覆盖主题配置文件中对应的内容。
 

@@ -74,6 +74,16 @@ back_to_top:
 
 ```yaml
 darkmode: 
-  enable: false
+  enable: true
 ```
 
+## note
+
+标签插件，丰富引用块样式。
+
+```
+note: 
+  enable: true
+```
+
+[样式预览](/demo/2020/06/note/)
