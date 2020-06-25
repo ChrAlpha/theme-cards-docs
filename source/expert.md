@@ -100,6 +100,26 @@ style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.5/dist/css/style.min.css
 style: https://unpkg.com/hexo-theme-cards@0.5/dist/css/style.min.css
 ```
 
+### darkmode
+
+暗色模式样式及切换按钮。
+
+**jsDelivr**
+
+```yaml
+darkmode: 
+  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/dark.min.css
+  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/js/darkmode.min.js
+```
+
+**UNPKG**
+
+```yaml
+darkmode: 
+  css: https://unpkg.com/hexo-theme-cards@0.6/dist/css/dark.min.css
+  js: https://unpkg.com/hexo-theme-cards@0.6/dist/js/darkmode.min.js
+```
+
 ### highlight
 
 目前仅支持默认代码高亮，如果你有修改 `source/github.min.css`，也请替换为相应的 CDN 地址或者将此项留空。
@@ -130,22 +150,6 @@ back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.2/dist/js/b2t.min.j
 
 ```yaml
 back_to_top: https://unpkg.com/hexo-theme-card@0.2/dist/js/b2t.min.js
-```
-
-### darkmode
-
-暗色模式切换按钮。
-
-**jsDelivr**
-
-```yaml
-darkmode: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.4/dist/js/darkmode.min.js
-```
-
-**UNPKG**
-
-```yaml
-darkmode: https://unpkg.com/hexo-theme-cards@0.4/dist/js/darkmode.min.js
 ```
 
 ### lazyload
