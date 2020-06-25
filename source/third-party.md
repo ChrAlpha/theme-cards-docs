@@ -43,7 +43,7 @@ disqus:
 ```yaml
 disqus: 
   enable: true
-  ...
+  ......
   disqusjs: 
     enable: true
     siteName: 
@@ -59,29 +59,63 @@ disqus:
 
 [https://valine.js.org](https://valine.js.org/)
 
-Valine 是一款基于 LeanCloud 的评论系统。
+Valine，一款基于 LeanCloud 的评论系统。
 
 ```yaml
 valine:
   enable: true
   appId: 
-  appKey: 
-  meta: nick,mail,link
-  requiredFields: nick,mail
+  appKey:
+  placeholder: 
   path: 
-  placeholder: 'just go!'
   avatar: 
+  meta: [nick, mail, link]
   pageSize: 
   lang: 
+  visitor: 
   highlight: 
+  avatarForce: 
   recordIP: 
+  serverURLs: 
+  enableQQ: 
+  requiredFields: [nick, mail]
   emojiCDN: 
   emojiMaps: 
-    xxx: xxx.jpg
-    ...
 ```
 
 你可以阅读 Valine 文档中的 [快速开始](https://valine.js.org/quickstart.html) 与 [配置项](https://valine.js.org/configuration.html) 了解相关参数细节。一般情况下，你只需要一个 LeanCloud 账号即可。
+
+### MiniValine
+
+[https://github.com/MiniValine/MiniValine](https://github.com/MiniValine/MiniValine) 
+
+MiniValine，一款基于 LeanCloud 的轻量级评论系统。
+
+```yaml
+minivaline: 
+  enable: true
+  appId: 
+  appKey: 
+  mode: 
+  placeholder: 
+  pathname: 
+  adminEmailMd5: 
+  master: 
+  friends: 
+  tagMeta: 
+  math: 
+  md: 
+  lang: 
+  emoticonUrl:
+  NoRecordIP: 
+  maxNest: 
+  pageSize: 
+  enableQQ: 
+  visitor: 
+  serverURLs: 
+```
+
+你可以阅读 MiniValine 文档中的 [Opinions](https://github.com/MiniValine/MiniValine#options) 了解相关配置项。一般情况下，你只需要一个 LeanCloud 账号即可。
 
 ### Gitalk
 

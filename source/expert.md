@@ -41,6 +41,8 @@ git clone --recurse-submodules https://github.com/ChrAlpha/[website source].git
 
 在**站点根目录**下创建 `source/_data/cards.yml`（若 `source/_data` 目录不存在，请新建）。并将你需要修改的内容填写至此（**无需**复制整个主题配置文件），根据约定，这里的内容将覆盖主题配置文件中对应的内容。
 
+{% note success %}
+
 例子：
 
 比如你需要修改 opengraph 配置，在主题配置文件中是：
@@ -77,6 +79,8 @@ head:
     twitter_id: ichralpha
     twitter_site: ichralpha
 ```
+
+{% endnote %}
 
 ## CDN
 
@@ -214,6 +218,26 @@ valine: https://cdnjs.cloudflare.com/ajax/libs/valine/1.4.14/Valine.min.js
 
 ```yaml
 valine: https://cdnjs.loli.net/ajax/libs/valine/1.4.14/Valine.min.js
+```
+
+### minivaline
+
+[https://github.com/MiniValine/MiniValine](https://github.com/MiniValine/MiniValine) [https://minivaline.github.io/](https://minivaline.github.io/)
+
+MiniValine 评论系统。
+
+详见 [https://theme-cards.ichr.me/third-party/#MiniValine](/third-party/#MiniValine)
+
+**jsDelivr**
+
+```yaml
+minivaline: https://cdn.jsdelivr.net/npm/minivaline@2.7.5/dist/MiniValine.min.js
+```
+
+**UNPKG**
+
+```yaml
+minivaline: https://unpkg.com/minivaline@2.7.5/dist/MiniValine.min.js
 ```
 
 ### wildfire
