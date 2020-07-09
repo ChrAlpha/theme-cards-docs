@@ -95,13 +95,13 @@ head:
 **jsDelivr**
 
 ```yaml
-style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.5/dist/css/style.min.css
+style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/style/main.min.css
 ```
 
 **UNPKG**
 
 ```yaml
-style: https://unpkg.com/hexo-theme-cards@0.5/dist/css/style.min.css
+style: https://unpkg.com/hexo-theme-cards@0.7/dist/css/style/main.min.css
 ```
 
 ### darkmode
@@ -112,16 +112,16 @@ style: https://unpkg.com/hexo-theme-cards@0.5/dist/css/style.min.css
 
 ```yaml
 darkmode: 
-  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/css/dark.min.css
-  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.6/dist/js/darkmode.min.js
+  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/style/dark.min.css
+  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/js/darkmode.min.js
 ```
 
 **UNPKG**
 
 ```yaml
 darkmode: 
-  css: https://unpkg.com/hexo-theme-cards@0.6/dist/css/dark.min.css
-  js: https://unpkg.com/hexo-theme-cards@0.6/dist/js/darkmode.min.js
+  css: https://unpkg.com/hexo-theme-cards@0.7/dist/css/style/dark.min.css
+  js: https://unpkg.com/hexo-theme-cards@0.7/dist/js/darkmode.min.js
 ```
 
 ### highlight
@@ -147,13 +147,13 @@ highlight: https://unpkg.com/hexo-theme-cards@0.7/dist/css/highlight/
 **jsDelivr**
 
 ```yaml
-back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.2/dist/js/b2t.min.js
+back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/js/b2t.min.js
 ```
 
 **UNPKG**
 
 ```yaml
-back_to_top: https://unpkg.com/hexo-theme-card@0.2/dist/js/b2t.min.js
+back_to_top: https://unpkg.com/hexo-theme-card@0.7/dist/js/b2t.min.js
 ```
 
 ### lazyload
