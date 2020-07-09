@@ -21,7 +21,7 @@ mathjax: true
 
 ## Lazyload
 
-「Cards」自带图片 Lazyload 的 helper，你无需再安装其他插件。至于启用，你需要将「`optimize` - `lazyload`」条目复制粘贴到站点配置文件中并对应修改即可。
+「Cards」自带图片 Lazyload 的 helper，你无需再安装其他插件。至于启用，你需要将「`optimize` - `lazyload`」条目复制粘贴到 **站点配置文件** 中并对应修改即可。
 
 ```yaml
 lazyload:

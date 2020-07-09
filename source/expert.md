@@ -126,18 +126,18 @@ darkmode:
 
 ### highlight
 
-目前仅支持默认代码高亮，如果你有修改 `source/github.min.css`，也请替换为相应的 CDN 地址或者将此项留空。
+Hexo 内置 highlight.js 定制样式，请填写文件夹位置而非特定样式位置。
 
 **jsDelivr**
 
 ```yaml
-highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.4/dist/css/github.min.css
+highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/highlight/
 ```
 
 **UNPKG**
 
 ```yaml
-highlight: https://unpkg.com/hexo-theme-cards@0.4/dist/css/github.min.css
+highlight: https://unpkg.com/hexo-theme-cards@0.7/dist/css/highlight/
 ```
 
 ### back_to_top

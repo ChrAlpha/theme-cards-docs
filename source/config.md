@@ -140,6 +140,20 @@ space:
   sm_space: 1.5rem	# 当屏幕宽度小于 650px 时候启用
 ```
 
+### highlight
+
+代码高亮样式，关于目前「Cards」支持的样式可在 [主题仓库](https://github.com/ChrAlpha/hexo-theme-cards/tree/master/source/css/highlight) 中查询，支持亮色/暗色主题独立样式。
+
+```yaml
+highlight: 
+
+  # 默认（亮色）代码高亮样式
+  default: github  # 这意味着你使用 `css/highlight/github.css`
+  
+  # 暗色模式代码高亮样式
+  darkmode: atom-one-dark 
+```
+
 ## Meta
 
 设置譬如默认文章标题、日期格式、文章摘要、文章尾部版权声明、自定义 footer 等信息格式。
