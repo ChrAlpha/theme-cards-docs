@@ -86,4 +86,16 @@ note:
   enable: true
 ```
 
-[样式预览](/demo/2020/06/note/)
+在文章中使用标签插件。
+
+```
+{% note [ type ] 自定义小标题 %}
+
+自定义正文
+
+{% endnote %}
+```
+
+其中 `[ type ]` 可选填：`info`、`important`、`tip`、`caution`、`warning`，分别对应 5 种样式。
+
+可前往 [主题 Demo](https://theme-cards.ich.me/demo/) 查看 [样式预览](https://theme-cards.ich.me/demo/2020/06/tag-plugin-note/)。
