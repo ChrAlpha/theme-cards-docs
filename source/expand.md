@@ -86,4 +86,14 @@ note:
   enable: true
 ```
 
-[样式预览](/demo/2020/06/note/)
+在文章中插入
+```
+{% note info 自定义小标题 %}
+自定义正文
+青山一道同云雨
+明月何曾是两乡
+{% endnote %}
+```
+默认支持的样式有 `info` `important` `tip` `caution` `warning`
+[样式预览](/demo/2020/06/tag-plugin-note/)
+可修改`\themes\cards\source\css\style\note.styl`进行自定义配色及新增更多样式
