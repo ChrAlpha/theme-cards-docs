@@ -86,14 +86,16 @@ note:
   enable: true
 ```
 
-在文章中插入
+在文章中使用标签插件。
+
 ```
-{% note info 自定义小标题 %}
+{% note [ type ] 自定义小标题 %}
+
 自定义正文
-青山一道同云雨
-明月何曾是两乡
+
 {% endnote %}
 ```
-默认支持的样式有 `info` `important` `tip` `caution` `warning`
-[样式预览](/demo/2020/06/tag-plugin-note/)
-可修改`\themes\cards\source\css\style\note.styl`进行自定义配色及新增更多样式
+
+其中 `[ type ]` 可选填：`info`、`important`、`tip`、`caution`、`warning`，分别对应 5 种样式。
+
+可前往 [主题 Demo](https://theme-cards.ich.me/demo/) 查看 [样式预览](https://theme-cards.ich.me/demo/2020/06/tag-plugin-note/)。
