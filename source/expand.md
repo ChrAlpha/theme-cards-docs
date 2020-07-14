@@ -98,4 +98,4 @@ note:
 
 其中 `[ type ]` 可选填：`info`、`important`、`tip`、`caution`、`warning`，分别对应 5 种样式。
 
-可前往 [主题 Demo](https://theme-cards.ich.me/demo/) 查看 [样式预览](https://theme-cards.ich.me/demo/2020/06/tag-plugin-note/)。
+可前往 [主题 Demo](https://theme-cards.ichr.me/demo/) 查看 [样式预览](https://theme-cards.ichr.me/demo/2020/06/tag-plugin-note/)。
