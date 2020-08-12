@@ -35,11 +35,11 @@ git clone --recurse-submodules https://github.com/ChrAlpha/[website source].git
 
 ## 平滑更新
 
->   「Cards」v0.5 最重要更新，请确保你使用的主题版本不低于 `0.5.0`。
-
 基于 Hexo 3.0 新增「数据文件」特性，无需直接更改主题 `_config.yml` 便可达到相同效果。以此使得主题配置文件的修改可存储与主题文件夹外，方便直接使用 Git 管理主题版本，而无需每次更新手动更改主题配置文件。
 
 在**站点根目录**下创建 `source/_data/cards.yml`（若 `source/_data` 目录不存在，请新建）。并将你需要修改的内容填写至此（**无需**复制整个主题配置文件），根据约定，这里的内容将覆盖主题配置文件中对应的内容。
+
+>   此特性从「Cards」v5.0 开始支持。
 
 {% note success %}
 
@@ -95,13 +95,13 @@ head:
 **jsDelivr**
 
 ```yaml
-style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/style/main.min.css
+style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/style/main.min.css
 ```
 
 **UNPKG**
 
 ```yaml
-style: https://unpkg.com/hexo-theme-cards@0.7/dist/css/style/main.min.css
+style: https://unpkg.com/hexo-theme-cards@1.0/dist/css/style/main.min.css
 ```
 
 ### darkmode
@@ -112,32 +112,98 @@ style: https://unpkg.com/hexo-theme-cards@0.7/dist/css/style/main.min.css
 
 ```yaml
 darkmode: 
-  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/style/dark.min.css
-  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/js/darkmode.min.js
+  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/style/dark.min.css
+  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/js/darkmode.min.js
 ```
 
 **UNPKG**
 
 ```yaml
 darkmode: 
-  css: https://unpkg.com/hexo-theme-cards@0.7/dist/css/style/dark.min.css
-  js: https://unpkg.com/hexo-theme-cards@0.7/dist/js/darkmode.min.js
+  css: https://unpkg.com/hexo-theme-cards@1.0/dist/css/style/dark.min.css
+  js: https://unpkg.com/hexo-theme-cards@1.0/dist/js/darkmode.min.js
 ```
 
 ### highlight
 
-Hexo 内置 highlight.js 定制样式，请填写文件夹位置而非特定样式位置。
+[http://theme-cards.ichr.me/expand/#highlight](http://theme-cards.ichr.me/expand/#highlight) 
+
+主题定制 highlight 样式。
 
 **jsDelivr**
 
 ```yaml
-highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/css/highlight/
+highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/highlight/
 ```
 
 **UNPKG**
 
 ```yaml
-highlight: https://unpkg.com/hexo-theme-cards@0.7/dist/css/highlight/
+highlight: https://unpkg.com/hexo-theme-cards@1.0/dist/css/highlight/
+```
+
+### hljs
+
+[https://highlightjs.org/](https://highlightjs.org/) 
+
+原生 highlight.js 样式。
+
+详见：[http://theme-cards.ichr.me/expand/#hljs](http://theme-cards.ichr.me/expand/#hljs) 
+
+**jsDelivr**
+
+```yaml
+hljs: https://cdn.jsdelivr.net/npm/highlight.js@10.1.2/styles/
+```
+
+**UNPKG**
+
+```yaml
+hljs: https://unpkg.com/highlight.js@10.1.2/styles/
+```
+
+**cdnjs**
+
+```yaml
+hljs: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/
+```
+
+**css.net**
+
+```yaml
+hljs: https://cdnjs.loli.net/ajax/libs/highlight.js/10.1.2/styles/
+```
+
+### prismjs
+
+[https://prismjs.com/](https://prismjs.com/) 
+
+PrismJS 样式。
+
+详见：[http://theme-cards.ichr.me/expand/#prismjs](http://theme-cards.ichr.me/expand/#prismjs) 
+
+**jsDelivr**
+
+```yaml
+prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.21.0/themes/
+```
+
+**UNPKG**
+
+```yaml
+prismjs: https://unpkg.com/prismjs@1.21.0/themes/
+```
+
+**cdnjs**
+
+```yaml
+prismjs: https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/
+```
+
+**css.net**
+
+```yaml
+https://cdnjs.loli.net/ajax/libs/prism/1.21.0/themes/
 ```
 
 ### back_to_top
@@ -147,18 +213,18 @@ highlight: https://unpkg.com/hexo-theme-cards@0.7/dist/css/highlight/
 **jsDelivr**
 
 ```yaml
-back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.7/dist/js/b2t.min.js
+back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/js/b2t.min.js
 ```
 
 **UNPKG**
 
 ```yaml
-back_to_top: https://unpkg.com/hexo-theme-card@0.7/dist/js/b2t.min.js
+back_to_top: https://unpkg.com/hexo-theme-card@1.0/dist/js/b2t.min.js
 ```
 
 ### lazyload
 
-Vanilla-Lazyload 12.0.0 [https://github.com/verlok/lazyload](https://github.com/verlok/lazyload)
+Vanilla-Lazyload 17.1.0 [https://github.com/verlok/lazyload](https://github.com/verlok/lazyload)
 
 主题内置图片 Lazyload 功能，默认调用 Vanilla Lazyload。
 
@@ -167,25 +233,25 @@ Vanilla-Lazyload 12.0.0 [https://github.com/verlok/lazyload](https://github.com/
 **jsDelivr**
 
 ```yaml
-lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js
+lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js
 ```
 
 **UNPKG**
 
 ```yaml
-lazyload: https://unpkg.com/vanilla-lazyload@12.0.0/dist/lazyload.min.js
+lazyload: https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js
 ```
 
 **cdnjs**
 
 ```yaml
-lazyload: https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/12.0.0/lazyload.min.js
+lazyload: https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js
 ```
 
 **css.net**
 
 ```yaml
-lazyload: https://cdnjs.loli.net/ajax/libs/vanilla-lazyload/12.0.0/lazyload.min.js
+lazyload: https://cdnjs.loli.net/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js
 ```
 
 ### valine

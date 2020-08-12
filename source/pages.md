@@ -75,7 +75,7 @@ layout: links
 ---
 ```
 
-友链数据需在 `front-matter` 中添加，假如你想添加 ChrAlpha 博客作为友链。
+友链数据可在 `front-matter` 中添加，假如你想添加 ChrAlpha 博客作为友链。
 
 ```
 links: 
@@ -88,3 +88,32 @@ links:
 ```
 
 其中背景颜色（backgroundColor）、文字颜色（textColor）可选；`target` 为链接打开方式，默认为 `_blank` 即 **新建标签页打开**，当然你可以设置为 `_self` 即 **当前标签页打开**。
+
+此外，还可以在此填入文件路径以使用外置 JSON 加载方式。
+
+```
+links: https://example.com/links.yml
+```
+
+```yaml
+# https://example.com/links.yml
+
+- name: ChrAlpha Blog
+  url: https://chralpha.com
+  avatar: https://cdn.jsdelivr.net/npm/chrdnx@1.0.10/img/head-round.png
+  target: _blank
+  backgroundColor: '#fff'
+  textColor: '#444'
+```
+
+这样每次访问页面时会根据外置文件在浏览器端生成友链页，方便在不修改站点文件的前提下更新友链页面。
+
+## 搜索页面
+
+「Cards」主题支持 [站内搜索](/expand/#站内搜索)，在此之前需要为它单独创建一个页面。
+
+```bash
+hexo new page "search"
+```
+
+不建议使用其他路径，否则可能需要修改主题源代码才能使其工作。

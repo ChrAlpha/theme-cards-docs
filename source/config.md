@@ -54,13 +54,53 @@ custom_head:
   ...
 ```
 
+## NavBar
+
+导航栏配置，默认显示在页面最上方。
+
+### sitename
+
+显示在导航栏左侧的名称。若此处留空将自动默认显示站点配置文件的 `title`。
+
+```yaml
+sitename: [ name ]
+```
+
+### menu
+
+导航栏右侧的按钮菜单，通常用于站内导航。
+
+```yaml
+menu: 
+  - name: 首页
+    url: /
+  - name: 标签
+    url: /tags/
+  - name: 归档
+    url: /archives/
+  - name: 友链
+    url: /friends/
+  - name: RSS
+    url: /atom.xml
+```
+
+每个按钮包含两个参数：`name` 和 `url`。前者定义按钮的显示文字，后者定义点击按钮所跳转的链接。
+
+### sticky
+
+启用此项使导航栏永远置于屏幕顶端，不随页面滚动。仅当屏幕宽度不小于 1080px 时生效。
+
+```yaml
+sticky: false
+```
+
 ## Cover
 
 封面配置，默认显示在除了文章页以外任何页面顶部。
 
 ### sitename
 
-显示在封面的标题，如已设置 `logo` 则不展示 `sitename` 。如果此处留空将自动默认为站点配置文件的 `title`。
+显示在封面的标题，如已设置 `logo` 则不展示 `sitename` 。若此处留空将自动默认显示站点配置文件的 `title`。
 
 ```yaml
 sitename: [ title ]
@@ -82,35 +122,9 @@ logo: [ url of your logo ]
 description: Hi, nice to meet you!
 ```
 
-### menu
-
->   从「Cards」v0.5 开始，按钮菜单置于顶部导航栏右侧。
-
-位于封面最后的按钮菜单，通常用于站内导航。
-
-```yaml
-menu: 
-  - name: 首页
-    url: /
-  - name: 标签
-    url: /tags/
-  - name: 归档
-    url: /archives/
-  - name: 友链
-    url: /friends/
-  - name: RSS
-    url: /atom.xml
-```
-
-每个按钮包含两个参数：`name` 和 `url`。前者定义按钮的显示文字，后者定义点击按钮所跳转的链接。
-
->   通常情况下，每个按钮显示文字 4 个字宽（每个中文占两个字宽），5 个按钮已是上限。若按钮过多可能导致在小屏设备上难以操作。
-
 ## Style
 
 用于控制站点自定义样式。再次提醒：如需自定义样式，请关闭默认 CDN 或更改对应 CDN 配置！
-
->   添加过多自定义样式在主题配置文件中，愿意调整的人少之又少，还容易使人混淆，得不偿失。于是决定在「Cards」v0.6 中删除了绝大多数自定义项。当然，你依旧可以前往 `cards/source/css/_/defines.styl` 中进行自定义
 
 ### color
 
@@ -118,7 +132,7 @@ menu:
 
 ```yaml
 color: 
-  main_color: '#ffb90f'
+  main_color: '#eb5757'
 ```
 
 ### radius
@@ -142,17 +156,7 @@ space:
 
 ### highlight
 
-代码高亮样式，关于目前「Cards」支持的样式可在 [主题仓库](https://github.com/ChrAlpha/hexo-theme-cards/tree/master/source/css/highlight) 中查询，支持亮色/暗色主题独立样式。
 
-```yaml
-highlight: 
-
-  # 默认（亮色）代码高亮样式
-  default: github  # 这意味着你使用 `css/highlight/github.css`
-  
-  # 暗色模式代码高亮样式
-  darkmode: atom-one-dark 
-```
 
 ## Meta
 
@@ -164,7 +168,7 @@ highlight:
 
 ```yaml
 # 默认文章标题，若文章无标题则展示此标题
-title: 
+title: no-title
 ```
 
 ### author
@@ -182,7 +186,7 @@ author:
 
 ### date
 
-文章创建日期，通常展示在首页文章摘要下方与文章页标题下方（可在 `layout` 处调整，详见下文）。
+文章创建日期，通常展示在首页文章摘要下方与文章页标题下方。
 
 ```yaml
 # 文章创建日期
@@ -198,8 +202,18 @@ date:
 ```yaml
 # 文章更新日期
 updated:
-  title: '最后更新于：'	# 展示在更新日期前的描述
+  title: ''	# 展示在更新日期前的描述
   format: 'YYYY-MM-DD'	# 日期格式 http://momentjs.com/docs/
+```
+
+### thumbnail
+
+文章缩略图，可在页面 `front-matter` 中通过 `thumbnail` 字段请求缩略图。当页面未被设置 `thumbnail` 字段时将自动回退至默认缩略图（`default`）。
+
+```yaml
+thumbnail: 
+  enable: true
+  default:
 ```
 
 ### expire
@@ -212,13 +226,13 @@ expire:
   duration: 120
 ```
 
-其中 duration 单位为「天」。
+其中 duration 单位为「天」，超过该时长则会自动添加过时提醒。
 
 ### auto_excerpt
 
 文章默认摘要，可以（且推荐）使用 `<!--more-->` 标记精确截取文章部分作为摘要。
 
-如果你没有设置 `<!--more-->` 标记且没有设置页面 `description` 参数，则会根据 `auto_excerpt` 是否启用来决定截取指定字数的摘要。
+如果你没有设置 `<!--more-->` 标记且没有设置页面 `description` 参数，则会根据 `auto_excerpt` 是否启用来决定截取指定字数（`length`）的摘要。
 
 ```yaml
 auto_excerpt: 
@@ -261,50 +275,72 @@ copyright:
 copyright: false
 ```
 
-### footer（网站页脚）
+## Footer
 
-网站页脚内容，展示在网页最下方 footer。可以自定义内容，如用于备案号声明等，使用 markdown 标记语言。
+网站页脚内容，展示在网页最下方。
+
+### copyright_since
+
+设置站点起始时间，用于底部 copyright 显示。
+
+例如：将此设为 `2018`，那么页脚就会显示 `© 2018 - 2020`（2020 为最后一次页面生成时间）。
+
+如果将此项留空，则单独显示 `© 2020`（2020 为最后一次页面生成时间）。
+
+如果你不想显示任何内容，请将此项设为 `false`。
 
 ```yaml
-# 网站页脚，支持 markdown
-footer:
-  - 'Copyright © 2020 '
-  - 'Powered by [Hexo](https://hexo.io) | Theme - [Cards](https://github.com/ChrAlpha/hexo-theme-cards)'
+copyright_since:
 ```
 
-## Layout
+### statistics
 
-用于控制元素展示与否。由于排版固定，所以以下内容 **仅控制展示与否、不控制展示顺序**。
+网站计数，目前支持 LeanCloud 与不蒜子两种方案，通过 `use` 字段选择。
 
 ```yaml
-layout: 
+statistics: 
 
-  # 首页/归档
-  # title/excerpt/thumbnail/date/updated/categories/tags
-  meta: 
-    - excerpt
-    - thumbnail
-    - date
-    - categories
-    # - tags
+# 选择 LeanCloud/busuanzi 为网站计数。如果你完全不想启用，将 `use` 项留空即可
+  use:   # leancloud | busuanzi
 
-  # 文章页
-  post: 
-    header:
-      - thumbnail
-      - date
-      - categories
-    footer: 
-      - copyright
-      - updated
-      - tags
-    side: 
-      - toc
+  # 如果选择使用 LeanCloud，则需完善下面的配置项
+  leancloud: 
+    appId: 
+    appKey: 
+    serverURL:   # REST API 服务器地址，LeanCloud 国际版不填
+
+  # 全站 UV（Unique Viewers）
+  site_uv:
+    enable: true
+    before_text: '' # 展示在数据前的内容，支持 HTML
+    after_text: Viewers  # 展示在数据后的内容，支持 HTML
+    divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
+  
+  # 全站 PV（Page Views）
+  site_pv:
+    enable: true
+    before_text: ''  # 展示在数据前的内容，支持 HTML
+    after_text: Views  # 展示在数据后的内容，支持 HTML
+    divider: ''  # 分隔符，HTML 语法支持
+    
+  # 页面 PV
+  page_pv:
+    enable: true
+    before_text: ''
+    after_text: Views 
 ```
 
-![](/assets/img/post-list-meta.png)
+`site_uv`/`site_pv` 显示在站点页脚，统计全站访客/访问数。其中：`before_text`（`after_text`）为统计数目之前（之后）显示的内容，支持 HTML；`divider` 问统计数据展示与之后内容的分割符，支持 HTML。
 
-![](/assets/img/post-header-footer.png)
+而 `page_pv` 统计单个页面访问数。其中：`before_text`（`after_text`）为统计数目之前（之后）显示的内容，支持 HTML。
 
-我们认为文章的标题、内容等元素是必要的，所以没有提供选项，而是 **默认开启**。
+### custom_text
+
+自定义页脚，支持 markdown，可用于展示网站备案等。
+
+```yaml
+custom_text: 
+  # - ''
+  # - ''
+```
 

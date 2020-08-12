@@ -44,11 +44,11 @@ date: 2020-04-24 10:30:08
 
 无需接触复杂代码，只要在配置文件中就可以通通自定义。
 
--   支持 7 种评论系统：Disqus、Valine、Gitalk、Gitment、来比力、畅言、Wildfire
+-   支持 8 种评论系统：Disqus、Valine、Gitalk、Gitment、来比力、畅言、Wildfire
 
--   支持 4 种统计服务：Google Analytics、百度统计、CNZZ、不蒜子计数
+-   支持 5 种统计服务：Google Analytics、百度统计、CNZZ、LeanCloud 计数、不蒜子计数
 
--   支持多种代码高亮样式
+-   支持多种代码高亮插件
 
 -   背景，卡片，链接，灰度 均可随心调整，打造专属自己网站的样式
 

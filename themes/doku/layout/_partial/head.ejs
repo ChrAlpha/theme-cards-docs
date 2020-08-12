@@ -1,4 +1,7 @@
 <meta charset="utf-8">
+<% if (page.noindex) { %>
+<meta name="robots" content="noindex,nofollow">
+<% } %>
 <title><%= page_title() %></title>
 <%- _meta_generator() %>
 <meta http-equiv="x-dns-prefetch-control" content="on">
