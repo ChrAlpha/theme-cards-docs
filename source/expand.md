@@ -203,5 +203,3 @@ back_to_top: true
 ```yaml
 darkmode: true
 ```
-
-
