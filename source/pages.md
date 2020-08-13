@@ -9,7 +9,7 @@ date: 2020-04-24 10:30:12
 
 ## 文章页面
 
-在新增文件 `front-matter` 中添加以下内容，即定义此页面为文章页面。
+在新增页面 `front-matter` 中添加以下内容，即定义此页面为文章页面。
 
 ```yaml
 ---
@@ -19,7 +19,7 @@ layout: post
 
 若无此条目，则根据站点配置文件中 `default_layout` 决定页面种类（一般为 `post`）。
 
-在文章页面中，你不会看到 cover（封面），取而代之的是「返回首页」按钮展示在顶部。也只有文章页面会渲染后续 markdown 内容，其他页面均不会渲染正文内容。
+仅在文章页面中，你不会看到 Cover 封面。
 
 ## 标签云
 
@@ -29,7 +29,7 @@ layout: post
 hexo new page "tags"
 ```
 
-在新建文件的 `front-matter` 中添加以下内容，即定义此页面为标签页面。
+在新增页面 `front-matter` 中添加以下内容，即定义此页面为标签页面。
 
 ```yaml
 ---
@@ -41,13 +41,13 @@ layout: tag
 
 ## 分类一览
 
-一般情况下，我们希望标签云路径在 `/categories/` 下（除非你更改过主题配置文件中 `categories_dir` 参数），所以要在 `./source/categories/` 文件夹中新建 `index.md`。使用以下命令即可：
+一般情况下，我们希望分类页面路径在 `/categories/` 下（除非你更改过主题配置文件中 `categories_dir` 参数），所以要在 `./source/categories/` 文件夹中新建 `index.md`。使用以下命令即可：
 
 ```bash
 hexo new page "categories"
 ```
 
-在新增文件 `front-matter` 中添加以下内容，即定义此页面为标签页面。
+在新增页面 `front-matter` 中添加以下内容，即定义此页面为分类页面。
 
 ```yaml
 ---
@@ -67,7 +67,7 @@ layout: category
 
 >   例如创建 `source/friends/index.md` 则渲染后路径为 `/friends/` ；而 `source/links.md` 则会渲染至 `/links.html` 。
 
-在 `front-matter` 中添加以下内容，即定义此页面为友链页面。
+在新增页面 `front-matter` 中添加以下内容，即定义此页面为友链页面。
 
 ```yaml
 ---
@@ -116,7 +116,7 @@ links: https://example.com/links.yml
 hexo new page "search"
 ```
 
-在新建文件 `front-matter` 中添加以下内容，即定义此页面为搜索页面。
+在新增页面 `front-matter` 中添加以下内容，即定义此页面为搜索页面。
 
 ```bash
 ---
