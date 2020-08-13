@@ -67,7 +67,7 @@ layout: category
 
 >   例如创建 `source/friends/index.md` 则渲染后路径为 `/friends/` ；而 `source/links.md` 则会渲染至 `/links.html` 。
 
-在 `front-matter` 中添加以下内容，将该页面定义为友链页面。
+在 `front-matter` 中添加以下内容，即定义此页面为友链页面。
 
 ```yaml
 ---
@@ -115,7 +115,9 @@ links: https://example.com/links.yml
 ```bash
 hexo new page "search"
 ```
-在新建'search'目录下的index.md文件的`front-matter` 中添加以下内容，即搜索功能方可生效。
+
+在新建文件 `front-matter` 中添加以下内容，即定义此页面为搜索页面。
+
 ```bash
 ---
 layout: search
