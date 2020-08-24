@@ -36,7 +36,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          personal_token: ${{ secrets.DEPLOY_KEY }}
           external_repository: ChrAlpha/theme-cards-site
           publish_dir: ./dist
           publish_branch: gh-pages
