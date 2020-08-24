@@ -1,0 +1,45 @@
+name: Theme Cards Docs CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Generate Site
+        run: |
+          mkdir ./dist
+          git clone https://github.com/ChrAlpha/theme-cards-docs docs
+          git clone https://github.com/ChrAlpha/theme-cards-demo demo
+          cd ./docs
+          npm i && npm run build
+          cp -rf ./public ../dist
+          cd ../demo
+          git clone https://github.com/ChrAlpha/hexo-theme-cards themes/cards
+          npm i && npm run build
+          cp -rf ./public ../dist/demo
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          external_repository: ChrAlpha/theme-cards-site
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          cname: theme-cards.ichr.me
+          allow_empty_commit: true
+          force_orphan: true
