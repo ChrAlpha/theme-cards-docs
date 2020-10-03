@@ -118,10 +118,30 @@ hexo new page "search"
 
 在新增页面 `front-matter` 中添加以下内容，即定义此页面为搜索页面。
 
-```bash
+```yaml
 ---
 layout: search
 ---
 ```
 
 不建议使用其他路径，否则可能需要修改主题源代码才能使其工作。
+
+## 说说页面
+
+「Cards」主题内置了 [Artitalk](https://github.com/ArtitalkJS/Artitalk) 组件，在新增页面 `front-matter` 中加入以下内容，即定义此页面为说说页面。
+
+```yaml
+---
+layout: artitalk
+---
+```
+
+此外，你需要将 [Artitalk 配置项](https://artitalk.js.org/settings.html) 填入该页面 `front-matter` 的 `artitalk` 字段下。
+
+```yaml
+artitalk: 
+  appId: xxx
+  appKey: xxx
+  serverURL: http://example.com
+```
+

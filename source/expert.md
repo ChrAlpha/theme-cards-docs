@@ -95,13 +95,13 @@ head:
 **jsDelivr**
 
 ```yaml
-style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/style/main.min.css
+style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/style/main.min.css
 ```
 
 **UNPKG**
 
 ```yaml
-style: https://unpkg.com/hexo-theme-cards@1.0/dist/css/style/main.min.css
+style: https://unpkg.com/hexo-theme-cards@1.1/dist/css/style/main.min.css
 ```
 
 ### darkmode
@@ -112,16 +112,16 @@ style: https://unpkg.com/hexo-theme-cards@1.0/dist/css/style/main.min.css
 
 ```yaml
 darkmode: 
-  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/style/dark.min.css
-  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/js/darkmode.min.js
+  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/style/dark.min.css
+  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/js/darkmode.min.js
 ```
 
 **UNPKG**
 
 ```yaml
 darkmode: 
-  css: https://unpkg.com/hexo-theme-cards@1.0/dist/css/style/dark.min.css
-  js: https://unpkg.com/hexo-theme-cards@1.0/dist/js/darkmode.min.js
+  css: https://unpkg.com/hexo-theme-cards@1.1/dist/css/style/dark.min.css
+  js: https://unpkg.com/hexo-theme-cards@1.1/dist/js/darkmode.min.js
 ```
 
 ### highlight
@@ -133,13 +133,13 @@ darkmode:
 **jsDelivr**
 
 ```yaml
-highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/css/highlight/
+highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/highlight/
 ```
 
 **UNPKG**
 
 ```yaml
-highlight: https://unpkg.com/hexo-theme-cards@1.0/dist/css/highlight/
+highlight: https://unpkg.com/hexo-theme-cards@1.1/dist/css/highlight/
 ```
 
 ### hljs
@@ -206,25 +206,9 @@ prismjs: https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/
 https://cdnjs.loli.net/ajax/libs/prism/1.21.0/themes/
 ```
 
-### back_to_top
-
-返回顶部按钮，此 JS 用于平滑滚动。
-
-**jsDelivr**
-
-```yaml
-back_to_top: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.0/dist/js/b2t.min.js
-```
-
-**UNPKG**
-
-```yaml
-back_to_top: https://unpkg.com/hexo-theme-card@1.0/dist/js/b2t.min.js
-```
-
 ### lazyload
 
-Vanilla-Lazyload 17.1.0 [https://github.com/verlok/lazyload](https://github.com/verlok/lazyload)
+Vanilla-Lazyload 17.1.2 [https://github.com/verlok/lazyload](https://github.com/verlok/lazyload)
 
 主题内置图片 Lazyload 功能，默认调用 Vanilla Lazyload。
 
@@ -233,19 +217,19 @@ Vanilla-Lazyload 17.1.0 [https://github.com/verlok/lazyload](https://github.com/
 **jsDelivr**
 
 ```yaml
-lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js
+lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js
 ```
 
 **UNPKG**
 
 ```yaml
-lazyload: https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js
+lazyload: https://unpkg.com/vanilla-lazyload@17.1.2/dist/lazyload.min.js
 ```
 
 **cdnjs**
 
 ```yaml
-lazyload: https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.js
+lazyload: https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.1.2/lazyload.min.js
 ```
 
 **css.net**
@@ -382,6 +366,24 @@ busuanzi: https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js
 
 ```yaml
 busuanzi: https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js
+```
+
+### Artitalk
+
+[https://github.com/ArtitalkJS/Artitalk](https://github.com/ArtitalkJS/Artitalk) 
+
+基于 Leancloud、可实时发布说说的 JS 组件。
+
+**jsDelivr**
+
+```yaml
+artitalk: https://cdn.jsdelivr.net/npm/artitalk@3.1.2/artitalk.min.js
+```
+
+**UNPKG**
+
+```yaml
+artitalk: https://unpkg.com/artitalk@3.1.2/artitalk.jss
 ```
 
 ### jQuery

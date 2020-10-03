@@ -100,23 +100,23 @@ sticky: false
 
 ### sitename
 
-显示在封面的标题，如已设置 `logo` 则不展示 `sitename` 。若此处留空将自动默认显示站点配置文件的 `title`。
+显示在封面的标题，如已设置 `avatar` 则不展示 `sitename` 。若此处留空将自动默认显示站点配置文件的 `title`。
 
 ```yaml
 sitename: [ title ]
 ```
 
-### logo
+### avatar
 
-站点徽标（注意此项与 `favicon` 不同），如已设置 `logo` 则不展示 `sitename` ，展示在封面。如果两项均设置将优先展示 `logo`。
+站点徽标（注意此项与 `favicon` 不同），展示为以 `96px` 为直径的圆形图标。如已设置 `avatar` 则不展示 `sitename`，如果两项均设置将优先展示 `avatar`。
 
 ```yaml
-logo: [ url of your logo ]
+avatar: [ url of your avatar image ]
 ```
 
 ### description
 
-一句话介绍/个性签名，展示在 `sitename`/`logo` 下方。
+一句话介绍/个性签名，展示在 `sitename`/`avatar` 下方。
 
 ```yaml
 description: Hi, nice to meet you!
