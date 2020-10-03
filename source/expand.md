@@ -168,6 +168,39 @@ note: true
 
 可前往 [主题 Demo](/demo/) 查看 [样式预览](/demo/2020/06/tag-plugin-note/)。
 
+## 内容折叠插件
+
+通过内容折叠插件折叠文章内任一内容片段。
+
+```yaml
+fold: 
+  enable: true
+  summary:   # 默认摘要
+  motion: 
+```
+
+如果将 `motion` 设置为 `true`，则内容折叠框在折叠/展开时会添加纵向滑动动画。
+
+在文章中使用本插件：
+
+```
+{% fold 折叠摘要 %}
+
+自定义正文
+
+{% endfold %}
+```
+
+如果你希望某一折叠框默认展开：
+
+```
+{% fold open, 折叠摘要 %}
+
+自定义正文
+
+{% endfold %}
+```
+
 ## fancybox
 
 图片点击放大插件，可以前往 Demo 中的图片测试页面查看效果。由于「Cards」定制了自己的 Lazyload 功能，所以即便开启图片懒加载也能很好地兼容 fancybox。此插件依赖 jQuery。
