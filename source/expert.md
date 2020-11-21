@@ -48,13 +48,11 @@ git clone --recurse-submodules https://github.com/ChrAlpha/[website source].git
 比如你需要修改 opengraph 配置，在主题配置文件中是：
 
 ```yaml
-# <head> 标签配置
 head: 
-  
-  # 网站图标
-  favicon: /favicon.ico
-  
-  # 社交分享链接
+
+  favicon: 
+  # ...
+
   opengraph: 
     enable: true
     type: 
@@ -64,11 +62,6 @@ head:
     image: page.thumbnail
     fb_admins: 
     fb_app_id: 
-
-  # 自定义 head
-  custom_head: 
-    # - ''
-    # - ''
 ```
 
 你只需要在 `source/_data/cards.yml` 中添加：
@@ -95,13 +88,13 @@ head:
 **jsDelivr**
 
 ```yaml
-style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/style/main.min.css
+style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/main.min.css
 ```
 
 **UNPKG**
 
 ```yaml
-style: https://unpkg.com/hexo-theme-cards@1.1/dist/css/style/main.min.css
+style: https://unpkg.com/hexo-theme-cards@1.2/dist/css/style/main.min.css
 ```
 
 ### darkmode
@@ -112,16 +105,16 @@ style: https://unpkg.com/hexo-theme-cards@1.1/dist/css/style/main.min.css
 
 ```yaml
 darkmode: 
-  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/style/dark.min.css
-  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/js/darkmode.min.js
+  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/dark.min.css
+  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/darkmode.min.js
 ```
 
 **UNPKG**
 
 ```yaml
 darkmode: 
-  css: https://unpkg.com/hexo-theme-cards@1.1/dist/css/style/dark.min.css
-  js: https://unpkg.com/hexo-theme-cards@1.1/dist/js/darkmode.min.js
+  css: https://unpkg.com/hexo-theme-cards@1.2/dist/css/style/dark.min.css
+  js: https://unpkg.com/hexo-theme-cards@1.2/dist/js/darkmode.min.js
 ```
 
 ### highlight
@@ -133,13 +126,13 @@ darkmode:
 **jsDelivr**
 
 ```yaml
-highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.1/dist/css/highlight/
+highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
 ```
 
 **UNPKG**
 
 ```yaml
-highlight: https://unpkg.com/hexo-theme-cards@1.1/dist/css/highlight/
+highlight: https://unpkg.com/hexo-theme-cards@1.2/dist/css/highlight/
 ```
 
 ### hljs
@@ -290,6 +283,30 @@ minivaline: https://cdn.jsdelivr.net/npm/minivaline@2.7.5/dist/MiniValine.min.js
 minivaline: https://unpkg.com/minivaline@2.7.5/dist/MiniValine.min.js
 ```
 
+### artalk
+
+[https://github.com/qwqcode/Artalk](https://github.com/qwqcode/Artalk)
+
+Artalk 评论系统。
+
+详见 [https://theme-cards.ichr.me/third-party/#Artalk](/third-party/#Artalk)。
+
+**jsDelivr**
+
+```yaml
+artalk:
+  css: https://cdn.jsdelivr.net/npm/artalk@1.0.6/dist/Artalk.css
+  js: https://cdn.jsdelivr.net/npm/artalk@1.0.6/dist/Artalk.js
+```
+
+**UNPKG**
+
+```yaml
+artalk:
+  css: https://unpkg.com/artalk@1.0.6/dist/Artalk.css
+  js: https://unpkg.com/artalk@1.0.6/dist/Artalk.js
+```
+
 ### wildfire
 
 [https://github.com/cheng-kang/wildfire](https://github.com/cheng-kang/wildfire/) [https://wildfire.js.org](https://wildfire.js.org/)
@@ -312,7 +329,7 @@ wildfire: https://unpkg.com/wildfire@0.3.9/dist/wildfire.auto.js
 
 ### mathjax
 
-https://www.mathjax.org/
+[https://www.mathjax.org/](https://www.mathjax.org/)
 
 MathJax 数学公式渲染。
 
@@ -338,6 +355,42 @@ mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.
 
 ```yaml
 mathjax: https://cdnjs.loli.net/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js
+```
+
+### katex
+
+[https://katex.org/](https://katex.org/)
+
+KaTeX 数学公式渲染。
+
+```yaml
+katex:
+  css: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css
+  js: https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js
+```
+
+**UNPKG**
+
+```yaml
+katex:
+  css: https://unpkg.com/katex@0.12.0/dist/katex.min.css
+  js: https://unpkg.com/katex@0.12.0/dist/katex.min.js
+```
+
+**cdnjs**
+
+```yaml
+katex:
+  css: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css
+  js: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js
+```
+
+**css.net**
+
+```yaml
+katex:
+  css: https://cdnjs.loli.net/ajax/libs/KaTeX/0.12.0/katex.min.css
+  js: https://cdnjs.loli.net/ajax/libs/KaTeX/0.12.0/katex.min.js
 ```
 
 ### busuanzi 

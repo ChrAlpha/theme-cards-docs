@@ -13,19 +13,22 @@ date: 2020-04-24 10:30:08
 
 ### favicon
 
-站点图标。
-
 ```yaml
-favicon: /favicon.ico
+favicon:
+  ico: 
+  small: 
+  medium: 
+  apple_touch_icon: 
+  safari_pinned_tab: 
 ```
 
-默认为网页目录下的 `/favicon.ico`（根据 Hexo 生成规则也就是 `source/favicon.ico`），可以替换为其他路径，如：
+- `ico`: 网站的 favicon，要求是 ico 格式
+- `small`: 网站的 favicon，要求是 png 格式、16x16 大小
+- `medium`: 网站的 favicon，要求是 png 格式、32x32 大小
+- `apple_touch_icon`: 将会显示在 iOS 上，要求是 png 格式，大小在 128px 到 192px 之间
+- `safari_pinned_tab`: 将会显示在 Safari 固定标签页、MBP Touchbar 上
 
-```yaml
-favicon: https://cdn.jsdelivr.net/npm/chrdnx@1.0.5/icon/favicon-32-transparent.png
-```
-
-这样便无需再将图标下载至站点目录中。
+你可以在 [这里](https://realfavicongenerator.net/) 生成上述所需的 favicon。对于不需要的配置对应留空即可。
 
 ### opengraph
 
@@ -96,7 +99,7 @@ sticky: false
 
 ## Cover
 
-封面配置，默认显示在除了文章页以外任何页面顶部。
+封面配置，默认显示在**除文章页以外**任何页面顶部。
 
 ### sitename
 
@@ -124,7 +127,7 @@ description: Hi, nice to meet you!
 
 ## Style
 
-用于控制站点自定义样式。再次提醒：如需自定义样式，请关闭默认 CDN 或更改对应 CDN 配置！
+用于个性化站点样式。
 
 ### color
 
@@ -164,10 +167,9 @@ space:
 
 ### title
 
-默认文章标题。当一篇文章不含标题时自动展示此标题顶替。
+默认文章标题，当一篇文章不含标题时自动展示此标题顶替。
 
 ```yaml
-# 默认文章标题，若文章无标题则展示此标题
 title: no-title
 ```
 
@@ -176,7 +178,6 @@ title: no-title
 默认作者，现暂主要用于 copyright 声明。日后会考虑添加展示文章作者的功能，方便多用户站点。
 
 ```yaml
-# 默认文章作者（可在front-matter中覆盖）
 author:
   name: ChrAlpha
   url: https://chralpha.com
@@ -189,22 +190,26 @@ author:
 文章创建日期，通常展示在首页文章摘要下方与文章页标题下方。
 
 ```yaml
-# 文章创建日期
 date:
-  title: ''				# 展示在发布日期前的描述
-  format: 'YYYY-MM-DD'	# 日期格式 http://momentjs.com/docs/
+  title: ''
+  format: 'YYYY-MM-DD'
 ```
+
+- `title`：展示在创建日期之前的内容
+- `format`：展示创建日期所用的日期格式，参照 [Moment.js 文档](https://momentjs.com/docs/)
 
 ### updated
 
 文章更新日期，通常展示在文章板块最下方。
 
 ```yaml
-# 文章更新日期
 updated:
-  title: ''	# 展示在更新日期前的描述
-  format: 'YYYY-MM-DD'	# 日期格式 http://momentjs.com/docs/
+  title: ''
+  format: 'YYYY-MM-DD'
 ```
+
+- `title`：展示在更新日期之前的内容
+- `format`：展示更新日期所用的日期格式，参照 [Moment.js 文档](https://momentjs.com/docs/)
 
 ### thumbnail
 
@@ -218,7 +223,7 @@ thumbnail:
 
 ### expire
 
-博文也许具备一定时效性，你可以打开 `expire` 自动为距今超过一定时间的文章添加过时提醒。
+自动为距今超过一定时间的文章添加过时提醒。
 
 ```yaml
 expire: 
@@ -250,9 +255,9 @@ toc:
   list_number: false
 ```
 
-`list_number` 用于控制是否显示编号。
+- `list_number`：自动为目录添加编号
 
-在开启此处全局开关后，仍需在 `layout.post.side` 中添加 `toc` 这一项。而即便全局开启，也可在特定页面 [Front-matter](/write/#Front-matter) 中关闭 ToC 展示。
+在开启此处全局开关后，也可在特定页面 [Front-matter](/write/#Front-matter) 中关闭 ToC 展示。
 
 >   不支持 h1 是经过考量的。无论是为了 SEO 还是为了文章层次性，都不建议在一个页面中添加多个 h1 标题，而文章 title 已是一个 h1 标题。
 
@@ -269,7 +274,9 @@ copyright:
     - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
 ```
 
-可在 `front-matter` 中关闭指定页面的 copyright 组件展示。
+- `custom_text`：在作者声明和永久链接之后显示的内容，可以多行、支持 markdown
+
+可在 `front-matter` 中添加以下内容以关闭指定页面的 copyright 组件展示。
 
 ```yaml
 copyright: false
@@ -300,28 +307,24 @@ copyright_since:
 ```yaml
 statistics: 
 
-# 选择 LeanCloud/busuanzi 为网站计数。如果你完全不想启用，将 `use` 项留空即可
-  use:   # leancloud | busuanzi
+  use: 
 
-  # 如果选择使用 LeanCloud，则需完善下面的配置项
   leancloud: 
     appId: 
     appKey: 
-    serverURL:   # REST API 服务器地址，LeanCloud 国际版不填
+    serverURL: 
 
-  # 全站 UV（Unique Viewers）
   site_uv:
     enable: true
-    before_text: '' # 展示在数据前的内容，支持 HTML
-    after_text: Viewers  # 展示在数据后的内容，支持 HTML
-    divider: '&nbsp;&nbsp;&nbsp;|' # 分隔符，HTML 语法支持
+    before_text: '' 
+    after_text: Viewers 
+    divider: '&nbsp;&nbsp;&nbsp;|' 
   
-  # 全站 PV（Page Views）
   site_pv:
     enable: true
-    before_text: ''  # 展示在数据前的内容，支持 HTML
-    after_text: Views  # 展示在数据后的内容，支持 HTML
-    divider: ''  # 分隔符，HTML 语法支持
+    before_text: '' 
+    after_text: Views 
+    divider: '' 
     
   # 页面 PV
   page_pv:
@@ -330,9 +333,15 @@ statistics:
     after_text: Views 
 ```
 
-`site_uv`/`site_pv` 显示在站点页脚，统计全站访客/访问数。其中：`before_text`（`after_text`）为统计数目之前（之后）显示的内容，支持 HTML；`divider` 问统计数据展示与之后内容的分割符，支持 HTML。
-
-而 `page_pv` 统计单个页面访问数。其中：`before_text`（`after_text`）为统计数目之前（之后）显示的内容，支持 HTML。
+- `use`：选择计数系统（目前支持 LeanCloud、不蒜子）
+- `leancloud`：选择使用 LeanCloud 所需完善的配置项
+- `site_uv`/`site_pv`：全站 Unique Viewers/Page Views
+  - `before_text`：展示在数据前的内容，支持 HTML
+  - `after_text`：展示在数据后的内容，支持 HTML
+  - `divider`：分隔符，支持 HTML
+- `page_pv`：单个页面访问数
+  - `before_text`：展示在数据前的内容，支持 HTML
+  - `after_text`：展示在数据后的内容，支持 HTML
 
 ### custom_text
 

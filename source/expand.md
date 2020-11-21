@@ -36,16 +36,14 @@ Hexo 定制 highlight.js 是无法直接使用 highlight.js 主题的，为此�
 
 ```yaml
 style: 
-  # ......
   
   highlight: 
-
-    # 默认代码高亮主题
     default: 
-
-    # 暗色代码高亮主题
     darkmode: 
 ```
+
+- `default`：默认代码高亮主题
+- `darkmode`：暗色模式下代码高亮主题
 
 这里只需填入代码高亮主题的名称，无需填入路径、后缀等，「Cards」在请求时会将其补全。而在 `vendors.highlight` 中可配置存放代码高亮主题的文件夹路径。
 
@@ -93,16 +91,14 @@ prismjs 支持直接使用其提供的 [主题](https://github.com/PrismJS/prism
 
 ```yaml
 style: 
-  # ......
   
   prismjs: 
-
-    # 默认代码高亮主题
     default: 
-
-    # 暗色代码高亮主题
     darkmode: 
 ```
+
+- `default`：默认代码高亮主题
+- `darkmode`：暗色模式下代码高亮主题
 
 同样的，这里只需填入代码高亮主题的名称，无需填入路径、后缀等，「Cards」在请求时会将其补全。而在 `vendors.prismjs` 中可配置存放代码高亮主题的文件夹路径。
 
@@ -131,6 +127,8 @@ lazyload:
   loadingImage: 
 ```
 
+- `loadingImage`：懒加载占位图
+
 ## 站内搜索
 
 「Cards」主题内置了站内搜索功能，为避免冲突请勿安装其他插件。在启用之前你需要为其单独 [生成一个页面](/pages/#搜索页面)。
@@ -141,10 +139,11 @@ lazyload:
 search:
   enable: true
   path: search.json
-  field: All  # Page | Post | All
+  field: All
 ```
 
-其中，`path` 为生成网站数据库的路径，`field` 为数据获取范围。
+- `path`：生成网站数据库路径
+- `field`：数据获取范围（Page | Post | All）
 
 ## 标签插件
 
@@ -175,11 +174,12 @@ note: true
 ```yaml
 fold: 
   enable: true
-  summary:   # 默认摘要
+  summary: 
   motion: 
 ```
 
-如果将 `motion` 设置为 `true`，则内容折叠框在折叠/展开时会添加纵向滑动动画。
+- `summary`：默认折叠标题
+- `motion`：折叠/展开时添加纵向滑动动画
 
 在文章中使用本插件：
 
@@ -219,7 +219,7 @@ fancybox:
 </fancybox>
 ```
 
- 而如果将 `auto: true` 开启，则自动应用到所有图片，无需包裹在 `<fancybox>` 内。
+而如果将 `auto: true` 开启，则自动应用到所有图片，无需包裹在 `<fancybox>` 内。
 
 ## 返回顶部
 

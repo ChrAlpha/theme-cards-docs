@@ -9,7 +9,7 @@ date: 2020-04-24 10:30:16
 
 
 
-由于 Hexo 静态站点特殊性，无法原生支持文章评论与数据统计等，这些部署在服务器的动态网站很容易实现的功能，这时一个普遍的解决方案便是借助第三方服务。「Cards」原生支持 7 种评论系统，以及 4 种站点数据统计服务，尽可能帮助每一个用户解决此痛点。如果你认为还有其他优秀、可取的服务我们没有内置，也欢迎新建 issue 或提交 PR。
+由于 Hexo 静态站点特殊性，无法原生支持文章评论与数据统计等，这些部署在服务器的动态网站很容易实现的功能，这时一个普遍的解决方案便是借助第三方服务。「Cards」原生支持 9 种评论系统，以及 5 种站点数据统计服务，尽可能帮助每一个用户解决此痛点。如果你认为还有其他优秀、可取的服务我们没有内置，也欢迎新建 issue 或提交 PR。
 
 ## 评论服务
 
@@ -17,8 +17,10 @@ date: 2020-04-24 10:30:16
 
 ```yaml
 comments: 
-  use:   # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
+  use: 
 ```
+
+- `use`：将需要开启的评论系统的名称填入，例如 `disqusjs`。
 
 >   除非你有特别考量，不然我们 **不建议** 同时开启超过 1 个评论服务。
 
@@ -26,7 +28,7 @@ comments:
 
 [https://disqus.com/](https://disqus.com/)
 
-「Cards」提供两种使用 Disqus 的方式，分别是常规开启与 DisqusJS。但无论你后续决定使用哪种，请先将配置文件中 Disqus 的开关打开。
+「Cards」提供两种使用 Disqus 的方式，分别是常规开启与 DisqusJS。
 
 ```yaml
 comments: 
@@ -47,9 +49,7 @@ comments:
 ```yaml
 comments: 
   use: disqusjs
-  
-  # ......
-  
+    
   disqusjs: 
     shortname: 
     siteName: 
@@ -70,8 +70,6 @@ Valine，一款基于 LeanCloud 的评论系统。
 ```yaml
 comments: 
   use: valine 
-  
-  # ......
   
   valine: 
     appId: 
@@ -105,8 +103,6 @@ MiniValine，一款基于 LeanCloud 的轻量级评论系统。
 comments: 
   use: minivaline
   
-  # ......
-  
   minivaline:  
     appId: 
     appKey: 
@@ -131,6 +127,32 @@ comments:
 
 你可以阅读 MiniValine 文档中的 [Opinions](https://github.com/MiniValine/MiniValine#options) 了解相关配置项。一般情况下，你只需要一个 LeanCloud 账号即可。
 
+### Artalk
+
+[https://github.com/qwqcode/Artalk](https://github.com/qwqcode/Artalk) 
+
+Artalk，一款简洁有趣的自托管评论系统。
+
+```yaml
+comments: 
+  use: artalk
+  
+  artalk: 
+    serverUrl: 
+    placeholder: 
+    noComment: 
+    defaultAvatar: 
+    pageKey: 
+    gravatar: 
+      cdn: 
+    readMore: 
+      pageSize: 
+      autoLoad: 
+    emoticons: 
+```
+
+你可以阅读 [Artalk 文档](https://github.com/qwqcode/Artalk) 了解相关配置项。
+
 ### Gitalk
 
 [https://github.com/gitalk/gitalk](https://github.com/gitalk/gitalk)
@@ -138,8 +160,6 @@ comments:
 ```yaml
 comments: 
   use: gitalk
-  
-  # ......
   
   gitalk:
     repo:
@@ -158,8 +178,6 @@ comments:
 comments: 
   use: gitment
   
-  # ......
-  
   gitment:
     repo:
     owner:
@@ -177,8 +195,6 @@ comments:
 comments: 
   use: levere
   
-  # ......
-  
   livere: 
     livere_uid:
 ```
@@ -193,12 +209,10 @@ comments:
 comments: 
   use: changyan
   
-  # ......
-  
   changyan: 
     appid:
     conf:
-    thread_key_type: path # id | path，单独定义时候用 “id”
+    thread_key_type: path 
 ```
 
 你可以在畅言后台安装方式找到你的 `appid` 与 `conf`。而 `thread_key_type` 为页面区分参数，默认使用页面路径区分。如果你经常更改链接，也可以在每篇文章的 `front-matter` 中自定义一个参数来区分，例如：
@@ -226,9 +240,7 @@ changyan:
 ```yaml
 comments: 
   use: wildfire
-  
-  # ......
-  
+    
   wildfire: 
     database_provider: firebase # firebase | wilddog
     wilddog_site_id:
