@@ -74,14 +74,14 @@ prismjs:
 
 ```yaml
 highlight:
-  enable: true
+  enable: false
   line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: false
   hljs: true
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: false
   tab_replace: ''
