@@ -85,6 +85,7 @@ links:
     target: _blank
     backgroundColor: '#fff'
     textColor: '#444'
+    desc: 描述性文字（可舍去）
 ```
 
 其中背景颜色（backgroundColor）、文字颜色（textColor）可选；`target` 为链接打开方式，默认为 `_blank` 即 **新建标签页打开**，当然你可以设置为 `_self` 即 **当前标签页打开**。
@@ -104,6 +105,7 @@ links: https://example.com/links.yml
   target: _blank
   backgroundColor: '#fff'
   textColor: '#444'
+  desc: 描述性文字（可舍去）
 ```
 
 这样每次访问页面时会根据外置文件在浏览器端生成友链页，方便在不修改站点文件的前提下更新友链页面。
@@ -145,3 +147,21 @@ artitalk:
   serverURL: http://example.com
 ```
 
+## 404 页面
+新建一个页面：
+
+```bash
+hexo new page "404"
+```
+
+在新增页面 `front-matter` 中添加以下内容，即定义此页面为 404 页并直接展示搜索框。
+
+```yaml
+---
+title: 404 Not Found
+layout: search
+permalink: /404
+---
+```
+
+（方便输错链接的用户根据关键词找到相应的文章）
