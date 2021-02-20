@@ -256,6 +256,22 @@ comments:
 
 你可以阅读 [官方文档](https://wildfire.js.org/#/zh-cn/) 了解参数细节及如何使用。
 
+### Twikoo
+
+[https://twikoo.js.org/](https://twikoo.js.org/) 
+
+Twikoo，一款基于 [腾讯云 CloudBase](https://cloudbase.net/) 的评论系统。
+
+```yaml
+comments:
+  use: twikoo
+  
+  twikoo:
+    envId:  # 你的 CloudBase 环境 ID
+```
+
+你可以阅读 Twikoo 文档 [快速上手](https://twikoo.js.org/quick-start.html#%E4%BA%91%E5%87%BD%E6%95%B0%E9%83%A8%E7%BD%B2) 部分了解如何配置 Cloudbase 云函数 。一般情况下，你只需要一个 CloudBase 免费应用即可。
+
 ## 数据统计服务
 
 ### Google Analytics
@@ -309,7 +325,22 @@ CNZZ 已被友盟收购，登陆后台找到代码安装页面。
 
 ```yaml
 analytics: 
-  ...
+  
   cnzz_site_id: 
 ```
 
+### Cloudflare Web Analytics
+
+[https://support.cloudflare.com/hc/en-us/articles/360052685432-Cloudflare-Web-Analytics](https://support.cloudflare.com/hc/en-us/articles/360052685432-Cloudflare-Web-Analytics) 
+
+Cloudflare Web Analytics，Cloudflare 提供的*免费、隐私优先*的统计服务（无需替换 Cloudflare DNS 解析或接入 Cloudflare CDN）。
+
+```yaml
+analytics: 
+  
+  cloudflare_site_id: 
+```
+
+在提示你插入的 JS 片段中找到 `token`，那便是你的 `cloudflare_site_id`。
+
+![](/assets/img/cloudflare-web-analytics-setup.png)
