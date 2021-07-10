@@ -44,9 +44,9 @@ date: 2020-04-24 10:30:08
 
 无需接触复杂代码，只要在配置文件中就可以通通自定义。
 
--   支持 9 种评论系统：Disqus、Valine、Artalk、Gitalk、Gitment、来比力、畅言、Wildfire
+-   支持 10 种评论系统：Disqus、Valine、Artalk、Gitalk、Gitment、来比力、畅言、Wildfire、Twikoo
 
--   支持 5 种统计服务：Google Analytics、百度统计、CNZZ、LeanCloud 计数、不蒜子计数
+-   支持 7 种统计服务：Google Analytics、百度统计、CNZZ、LeanCloud 计数、不蒜子计数、Cloudflare Web Analytics、Umami
 
 -   支持多种代码高亮插件
 
