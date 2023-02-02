@@ -56,6 +56,7 @@ comments:
     api: 
     apikey: 
     admin: ''
+    adminLabel: 
     nesting: 2
 ```
 
