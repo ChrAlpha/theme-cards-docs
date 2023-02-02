@@ -39,7 +39,7 @@ git clone --recurse-submodules https://github.com/ChrAlpha/[website source].git
 
 在**站点根目录**下创建 `source/_data/cards.yml`（若 `source/_data` 目录不存在，请新建）。并将你需要修改的内容填写至此（**无需**复制整个主题配置文件），根据约定，这里的内容将覆盖主题配置文件中对应的内容。
 
->   此特性从「Cards」v5.0 开始支持。
+>   此特性从「Cards」v0.5.0 开始支持。
 
 {% note success %}
 
@@ -88,13 +88,13 @@ head:
 **jsDelivr**
 
 ```yaml
-style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/main.min.css
+style: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/css/style/main.min.css
 ```
 
 **UNPKG**
 
 ```yaml
-style: https://unpkg.com/hexo-theme-cards@1.2/dist/css/style/main.min.css
+style: https://unpkg.com/hexo-theme-cards@1.4/dist/css/style/main.min.css
 ```
 
 ### darkmode
@@ -105,16 +105,16 @@ style: https://unpkg.com/hexo-theme-cards@1.2/dist/css/style/main.min.css
 
 ```yaml
 darkmode: 
-  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/style/dark.min.css
-  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/js/darkmode.min.js
+  css: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/css/style/dark.min.css
+  js: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/js/darkmode.min.js
 ```
 
 **UNPKG**
 
 ```yaml
 darkmode: 
-  css: https://unpkg.com/hexo-theme-cards@1.2/dist/css/style/dark.min.css
-  js: https://unpkg.com/hexo-theme-cards@1.2/dist/js/darkmode.min.js
+  css: https://unpkg.com/hexo-theme-cards@1.4/dist/css/style/dark.min.css
+  js: https://unpkg.com/hexo-theme-cards@1.4/dist/js/darkmode.min.js
 ```
 
 ### highlight
@@ -126,13 +126,13 @@ darkmode:
 **jsDelivr**
 
 ```yaml
-highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.2/dist/css/highlight/
+highlight: https://cdn.jsdelivr.net/npm/hexo-theme-cards@1.4/dist/css/highlight/
 ```
 
 **UNPKG**
 
 ```yaml
-highlight: https://unpkg.com/hexo-theme-cards@1.2/dist/css/highlight/
+highlight: https://unpkg.com/hexo-theme-cards@1.4/dist/css/highlight/
 ```
 
 ### hljs
