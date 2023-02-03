@@ -127,6 +127,7 @@ lazyload:
   loadingImage: 
 ```
 
+- `onlypost`: 仅在文章页面启用图片懒加载
 - `loadingImage`：懒加载占位图
 
 ## 站内搜索
