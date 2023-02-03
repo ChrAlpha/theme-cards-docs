@@ -9,7 +9,7 @@ date: 2020-04-24 10:30:20
 
 ## 代码高亮
 
-Hexo 内置两款代码高亮插件——highlight.js 与 prismjs，而 highlight.js 又分为 Hexo 定制 highlight.js 与原生 highlight.js。这样就对应三个版本：Hexo 定制 highlight.js（`highlihgt`）、原生 highlight.js（`hljs`）与 prismjs（`prismjs`）。
+Hexo 内置两款代码高亮插件——highlight.js 与 prismjs，而 highlight.js 又分为 Hexo 定制 highlight.js 与原生 highlight.js。这样就对应三个版本：Hexo 定制 highlight.js（`highlight`）、原生 highlight.js（`hljs`）与 prismjs（`prismjs`）。
 
 ### highlight
 
