@@ -81,13 +81,22 @@ layout: links
 links: 
   - name: ChrAlpha Blog
     url: https://chralpha.com
-    avatar: https://cdn.jsdelivr.net/npm/chrdnx@1.0.10/img/head-round.png
+    avatar: https://friends.ichr.me/img/ichr.me.png
+    desc: 你必须拼尽全力，才能显得毫不费力
     target: _blank
     backgroundColor: '#fff'
     textColor: '#444'
 ```
 
-其中背景颜色（backgroundColor）、文字颜色（textColor）可选；`target` 为链接打开方式，默认为 `_blank` 即 **新建标签页打开**，当然你可以设置为 `_self` 即 **当前标签页打开**。
+- `name`: 友链名称
+- `url`: 友链地址
+- `avatar`: 友链头像
+- `desc`: 友链介绍
+- `target`: 链接打开方式——（默认）`_blank` 新建标签页打开；`_self` 当前标签页打开
+- `backgroundColor`: 友链卡片背景颜色
+- `textColor`: 友链文字颜色
+
+以上仅 `name`、`url` 两个参数必填，其余参数选填。
 
 此外，还可以在此填入文件路径以使用外置 JSON 加载方式。
 
@@ -100,7 +109,8 @@ links: https://example.com/links.yml
 
 - name: ChrAlpha Blog
   url: https://chralpha.com
-  avatar: https://cdn.jsdelivr.net/npm/chrdnx@1.0.10/img/head-round.png
+  avatar: https://friends.ichr.me/img/ichr.me.png
+  desc: 你必须拼尽全力，才能显得毫不费力
   target: _blank
   backgroundColor: '#fff'
   textColor: '#444'
