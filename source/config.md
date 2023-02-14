@@ -215,9 +215,12 @@ updated:
 
 文章缩略图，可在页面 `front-matter` 中通过 `thumbnail` 字段请求缩略图。当页面未被设置 `thumbnail` 字段时将自动回退至默认缩略图（`default`）。
 
+如果已使用 [资源文件夹](https://hexo.io/docs/asset-folders)，可将 `relative` 设为 `true` 保证文章缩略图在主页、其他页面也能正常获取。
+
 ```yaml
 thumbnail: 
   enable: true
+  relative: 
   default:
 ```
 
