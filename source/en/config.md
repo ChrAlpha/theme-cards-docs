@@ -1,15 +1,17 @@
 ---
-title: 基本配置
+title: Configuration
 type: docs
-permalink: config/
+permalink: en/config/
 date: 2020-04-24 10:30:08
 ---
 
-请使用 Notepad++，VS Code，Vim 等编辑器打开主题配置文件。对于 Windows 用户，**不建议** 使用自带记事本打开配置文件，因为可能会带来难以预测的编码错误。
+
+
+Please use VS Code (or Notepad++, Vim, etc) editors to edit theme configuration file. For Windows users, it's NOT recommanded to open configuration files with Windows default notepad, since it may bring unexpected encoding errors.
 
 ## Head
 
-生成 HTML 的头部信息 `<head>`。
+The `<head>` section of HTML.
 
 ### favicon
 
@@ -22,17 +24,17 @@ favicon:
   safari_pinned_tab: 
 ```
 
-- `ico`: 网站的 favicon，要求是 ico 格式
-- `small`: 网站的 favicon，要求是 png 格式、16x16 大小
-- `medium`: 网站的 favicon，要求是 png 格式、32x32 大小
-- `apple_touch_icon`: 将会显示在 iOS 上，要求是 png 格式，大小在 128px 到 192px 之间
-- `safari_pinned_tab`: 将会显示在 Safari 固定标签页、MBP Touchbar 上
+- `ico`: The website's favicon in `.ico` format.
+- `small`: The website's favicon in `.png` format, with a size of 16x16 pixels.
+- `medium`: The website's favicon in `.png` format, with a size of 32x32 pixels.
+- `apple_touch_icon`: The icon that will be displayed on iOS devices, in `.png` format with a size between 128px and 192px.
+- `safari_pinned_tab`: The icon that will be displayed on Safari's pinned tabs and on the MacBook Pro's Touch Bar.
 
-你可以在 [这里](https://realfavicongenerator.net/) 生成上述所需的 favicon。对于不需要的配置对应留空即可。
+You can generate the required favicons [here](https://realfavicongenerator.net/). Leave the fields empty for configurations that are not needed.
 
 ### opengraph
 
-社交链接分享协议，开启后某些社交平台（如 Twitter、Facebook、Telegram 等）粘贴文章链接便能自动生成分享卡片。也有助于爬虫更好地理解你的内容。
+Social sharing protocol that allows certain social media platforms (such as Twitter, Facebook, Telegram, etc.) to automatically generate sharing cards when the article link is sended. It also helps web crawlers to better understand your content.
 
 ```yaml
 opengraph: 
@@ -48,7 +50,7 @@ opengraph:
 
 ### custom_text
 
-可以在此处随意添加信息，所有内容会被追加到 `<head>` 内，例如搜索引擎所有权验证等。
+You can add any information here, and it will be appended to the `<head>` section. For example, verification tags for search engines console or webmaster tools.
 
 ```yaml
 custom_head: 
@@ -59,11 +61,11 @@ custom_head:
 
 ## NavBar
 
-导航栏配置，默认显示在页面最上方。
+The navigation bar configuration. NavBar is displayed by default at the top of the page.
 
 ### sitename
 
-显示在导航栏左侧的名称。若此处留空将自动默认显示站点配置文件的 `title`。
+The name displayed on the left side of the navigation bar. If left empty, it will default to the `title` of the site configuration file.
 
 ```yaml
 sitename: [ name ]
@@ -71,27 +73,27 @@ sitename: [ name ]
 
 ### menu
 
-导航栏右侧的按钮菜单，通常用于站内导航。
+The button menu on the right side of the navigation bar, usually used for internal navigation.
 
 ```yaml
 menu: 
-  - name: 首页
+  - name: Home
     url: /
-  - name: 标签
+  - name: Tags
     url: /tags/
-  - name: 归档
+  - name: Archives
     url: /archives/
-  - name: 友链
+  - name: Friends
     url: /friends/
   - name: RSS
     url: /atom.xml
 ```
 
-每个按钮包含两个参数：`name` 和 `url`。前者定义按钮的显示文字，后者定义点击按钮所跳转的链接。
+Each button has two parameters: `name` and `url`. The former defines the display text of the button, and the latter defines the link where the button will take the user to.
 
 ### sticky
 
-启用此项使导航栏永远置于屏幕顶端，不随页面滚动。仅当屏幕宽度不小于 1080px 时生效。
+Enabling this option will make the navigation bar always stay at the top of the screen and not move when the page is scrolled. This only takes effect when the screen width is at least 1080px.
 
 ```yaml
 sticky: false
@@ -99,11 +101,11 @@ sticky: false
 
 ## Cover
 
-封面配置，默认显示在**除文章页以外**任何页面顶部。
+The cover configuration that is displayed by default at the top of all pages **except for article pages**.
 
 ### sitename
 
-显示在封面的标题，如已设置 `avatar` 则不展示 `sitename` 。若此处留空将自动默认显示站点配置文件的 `title`。
+The title displayed on the cover. If `avatar` has been set, `sitename` will not be displayed. If left empty, it will default to the `title` of the site configuration file.
 
 ```yaml
 sitename: [ title ]
@@ -111,7 +113,7 @@ sitename: [ title ]
 
 ### avatar
 
-站点徽标（注意此项与 `favicon` 不同），展示为以 `96px` 为直径的圆形图标。如已设置 `avatar` 则不展示 `sitename`，如果两项均设置将优先展示 `avatar`。
+Site logo (different from `favicon`), displayed as a circular icon with a diameter of `96px`. If an `avatar` has been set, the sitename will not be displayed. If both `avatar` and `sitename` are set, the `avatar` will be prioritized.
 
 ```yaml
 avatar: [ url of your avatar image ]
@@ -119,7 +121,7 @@ avatar: [ url of your avatar image ]
 
 ### description
 
-一句话介绍/个性签名，展示在 `sitename`/`avatar` 下方。
+A signature displayed below the `sitename`/`avatar`.
 
 ```yaml
 description: Hi, nice to meet you!
@@ -127,20 +129,21 @@ description: Hi, nice to meet you!
 
 ## Style
 
-用于个性化站点样式。
+Used for customizing site styles.
 
 ### color
 
-主要颜色样式，控制导航按钮、ToC、归档页面选中下划线颜色。
+The main color style that controls the color of the navigation buttons, Table of Contents (ToC), and the underline color on the archive page when selected.
 
 ```yaml
 color: 
   main_color: '#eb5757'
+
 ```
 
 ### radius
 
-圆角设置，控制卡片圆角半径。
+Sets the rounding radius and controls the rounding radius of the card.
 
 ```yaml
 radius: 
@@ -149,25 +152,25 @@ radius:
 
 ### space
 
-基准间距，防止板块相距过密。
+The baseline spacing that prevents the panels from being too close together.
 
 ```yaml
 space: 
   main_space: 3.5rem
-  sm_space: 1.5rem	# 当屏幕宽度小于 650px 时候启用
+  sm_space: 1.5rem	# Enabled when the screen width is less than 650px
 ```
 
 ### highlight / hljs / prismjs
 
-详见 [拓展插件 - 代码高亮](/expand/#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE)。
+Refer to "Expansion Plugin - Code Highlighting" for more details.
 
 ## Meta
 
-设置譬如默认文章标题、日期格式、文章摘要、文章尾部版权声明、自定义 footer 等信息格式。
+The Meta settings control information such as the default article title, date format, article summary, footer copyright statement, and custom footer formats.
 
 ### title
 
-默认文章标题，当一篇文章不含标题时自动展示此标题顶替。
+The default article title, which is automatically displayed if an article has no title.
 
 ```yaml
 title: no-title
@@ -175,7 +178,7 @@ title: no-title
 
 ### author
 
-默认作者，现暂主要用于 copyright 声明。日后会考虑添加展示文章作者的功能，方便多用户站点。
+The default author, mainly used for copyright statements. The ability to display the author of an article will be considered in the future, which will be helpful for multi-author sites.
 
 ```yaml
 author:
@@ -183,11 +186,11 @@ author:
   url: https://chralpha.com
 ```
 
-此设置可在文章 `front-matter` 中覆盖。
+This setting can be overridden in the `front-matter` of an article.
 
 ### date
 
-文章创建日期，通常展示在首页文章摘要下方与文章页标题下方。
+The date the article was created, usually displayed below the article summary on the home page and under the article title on the article page.
 
 ```yaml
 date:
@@ -195,12 +198,13 @@ date:
   format: 'YYYY-MM-DD'
 ```
 
-- `title`：展示在创建日期之前的内容
-- `format`：展示创建日期所用的日期格式，参照 [Moment.js 文档](https://momentjs.com/docs/)
+- `title`: the text to display before the date
+- `format`: the date format to use, as specified in the [Moment.js documentation](https://momentjs.com/docs/)
+
 
 ### updated
 
-文章更新日期，通常展示在文章板块最下方。
+The date the article was last updated, usually displayed at the bottom of the article section.
 
 ```yaml
 updated:
@@ -208,14 +212,15 @@ updated:
   format: 'YYYY-MM-DD'
 ```
 
-- `title`：展示在更新日期之前的内容
-- `format`：展示更新日期所用的日期格式，参照 [Moment.js 文档](https://momentjs.com/docs/)
+- `title`: the text to display before the updated date
+- `format`: the date format to use, as specified in the [Moment.js documentation](https://momentjs.com/docs/)
 
 ### thumbnail
 
 文章缩略图，可在页面 `front-matter` 中通过 `thumbnail` 字段请求缩略图。当页面未被设置 `thumbnail` 字段时将自动回退至默认缩略图（`default`）。
+The thumbnail image for the article. `thumbnail` can be set in the `front-matter` of an article. If no `thumbnail` is set, the `default` will be used.
 
-如果已使用 [资源文件夹](https://hexo.io/docs/asset-folders)，可将 `relative` 设为 `true` 保证文章缩略图在主页、其他页面也能正常获取。
+If the [asset folder](https://hexo.io/docs/asset-folders) has been set up, set `relative` to `true` to ensure that the thumbnail image can be obtained correctly on the home page and other pages.
 
 ```yaml
 thumbnail: 
@@ -226,7 +231,7 @@ thumbnail:
 
 ### expire
 
-自动为距今超过一定时间的文章添加过时提醒。
+Automatically adds a warning message to articles that have been published for a certain period of time.
 
 ```yaml
 expire: 
@@ -234,13 +239,13 @@ expire:
   duration: 120
 ```
 
-其中 duration 单位为「天」，超过该时长则会自动添加过时提醒。
+The `duration` is in days. If an article is older than this value, a warning message will be added.
 
 ### auto_excerpt
 
-文章默认摘要，可以（且推荐）使用 `<!--more-->` 标记精确截取文章部分作为摘要。
+The default article summary. You can (and are recommended to) use the `<!--more-->` tag to specify the portion of the article to be used as the summary.
 
-如果你没有设置 `<!--more-->` 标记且没有设置页面 `description` 参数，则会根据 `auto_excerpt` 是否启用来决定截取指定字数（`length`）的摘要。
+If you do not set the `<!--more-->` tag and do not specify the description, then the `auto_excerpt` will determine whether intercept a summary of the specified number of words (`length`).
 
 ```yaml
 auto_excerpt: 
@@ -250,7 +255,7 @@ auto_excerpt:
 
 ### toc
 
-文章目录，展示在文章页面侧边栏，支持 h2 ~ h5 级标题（不支持 h1）。
+The table of contents for the article, displayed in the sidebar of the article page. Supports headings h2 to h5 (but not h1).
 
 ```yaml
 toc: 
@@ -258,28 +263,29 @@ toc:
   list_number: false
 ```
 
-- `list_number`：自动为目录添加编号
+- `list_number`: automatically numbers the items in the table of contents
 
-在开启此处全局开关后，也可在特定页面 [Front-matter](/write/#Front-matter) 中关闭 ToC 展示。
+After turning on this global switch, you can also turn off the ToC display in specific pages in the [Front-matter](/write/#Front-matter) of those pages.
 
->   不支持 h1 是经过考量的。无论是为了 SEO 还是为了文章层次性，都不建议在一个页面中添加多个 h1 标题，而文章 title 已是一个 h1 标题。
+> It is not recommended to have multiple h1 titles on one page for SEO or for the hierarchy of the article. The article title is already an h1 title.
 
 ### copyright
 
-版权声明，若开启将默认文章板块最下方。
+Displays a copyright statement at the bottom of the article.
 
 ```yaml
 copyright: 
   enable: true
   
   # 在作者声明和永久链接之后，可以多行，支持 markdown
+  # Multiple lines of text are allowed after the author statement and permanent link, supporting markdown format
   custom_text:
     - '文章默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议进行许可，使用时请注意遵守协议。'
 ```
 
-- `custom_text`：在作者声明和永久链接之后显示的内容，可以多行、支持 markdown
+- `custom_text`: The text to be displayed after the author statement and permanent link. Multiple lines of text are allowed and the text supports markdown format.
 
-可在 `front-matter` 中添加以下内容以关闭指定页面的 copyright 组件展示。
+To disable the copyright display for a specific page, add the following content to the `front-matter`.
 
 ```yaml
 copyright: false
@@ -287,17 +293,17 @@ copyright: false
 
 ## Footer
 
-网站页脚内容，展示在网页最下方。
+Displays the website footer at the bottom of the web page.
 
 ### copyright_since
 
-设置站点起始时间，用于底部 copyright 显示。
+Specifies the website start time for the copyright display.
 
-例如：将此设为 `2018`，那么页脚就会显示 `© 2018 - 2020`（2020 为最后一次页面生成时间）。
+For example, if set to `2018`, the footer will display `© 2018 - 2020` (2020 is the last time the page was generated).
 
-如果将此项留空，则单独显示 `© 2020`（2020 为最后一次页面生成时间）。
+If left empty, the footer will display `© 2020` (2020 is the last time the page was generated).
 
-如果你不想显示任何内容，请将此项设为 `false`。
+If you don't want to display any content, set this to `false`.
 
 ```yaml
 copyright_since:
@@ -305,7 +311,7 @@ copyright_since:
 
 ### statistics
 
-网站计数，目前支持 LeanCloud 与不蒜子两种方案，通过 `use` 字段选择。
+Displays website statistics, and currently supports two systems: LeanCloud and Busuanzi. Choose the system using the `use`.
 
 ```yaml
 statistics: 
@@ -346,9 +352,19 @@ statistics:
   - `before_text`：展示在数据前的内容，支持 HTML
   - `after_text`：展示在数据后的内容，支持 HTML
 
+- use: Choose the statistics system (currently supports LeanCloud and Busuanzi).
+- leancloud: Additional configuration items required for using LeanCloud.
+- site_uv/site_pv: Unique viewers and page views for the entire website.
+  - before_text: Text to be displayed before the data, in HTML format.
+  - after_text: Text to be displayed after the data, in HTML format.
+  - divider: Separator, in HTML format.
+- page_pv: Page views for a single page.
+  - before_text: Text to be displayed before the data, in HTML format.
+  - after_text: Text to be displayed after the data, in HTML format.
+
 ### custom_text
 
-自定义页脚，支持 markdown，可用于展示网站备案等。
+Customizes the website footer, supporting markdown format.
 
 ```yaml
 custom_text: 
