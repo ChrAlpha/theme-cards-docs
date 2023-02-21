@@ -1,7 +1,7 @@
 ---
 title: Third Party Services
 type: docs
-permalink: third-party/
+permalink: en/third-party/
 date: 2020-04-24 10:30:16
 ---
 
@@ -187,7 +187,7 @@ comments:
 
 You can refer to the [Gitment document](https://github.com/imsun/gitment#3-render-gitment) to learn about related parameter details. This plugin requires GitHub Application. If you have not created one yet, please [apply here](https://github.com/settings/applications/new).
 
-### 来必力
+### LiveRe
 
 [https://livere.com/](https://livere.com/)
 
@@ -201,7 +201,7 @@ comments:
 
 "Cards" has the free version of LiveRe, `ciry_version`, built in. You can obtain the UID from the LiveRe management background.
 
-### 畅言
+### Changyan
 
 [http://changyan.kuaizhan.com/](http://changyan.kuaizhan.com/)
 
