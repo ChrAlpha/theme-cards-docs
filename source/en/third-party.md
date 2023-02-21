@@ -1,5 +1,5 @@
 ---
-title: 第三方服务
+title: Third Party Services
 type: docs
 permalink: third-party/
 date: 2020-04-24 10:30:16
@@ -7,28 +7,26 @@ date: 2020-04-24 10:30:16
 
 
 
+Due to the nature of the Hexo static site, it cannot natively support features such as article commenting and data statistics that are easy to implement on dynamic websites deployed on servers. A common solution is to use third-party services. "Cards" natively supports 9 types of comment systems and 5 types of site data statistics services, aiming to help each user solve this pain point as much as possible. If you think there are other excellent and desirable services that we have not built-in, you are welcome to open an issue or submit a PR.
 
+## Comments Services
 
-由于 Hexo 静态站点特殊性，无法原生支持文章评论与数据统计等，这些部署在服务器的动态网站很容易实现的功能，这时一个普遍的解决方案便是借助第三方服务。「Cards」原生支持 9 种评论系统，以及 5 种站点数据统计服务，尽可能帮助每一个用户解决此痛点。如果你认为还有其他优秀、可取的服务我们没有内置，也欢迎新建 issue 或提交 PR。
-
-## 评论服务
-
-评论系统在主题配置文件 `comments` 处设置，通过 `use` 字段选择评论系统。
+The comment system is set in the theme configuration file `comments` and the comment system is selected through the `use`.
 
 ```yaml
 comments: 
   use: 
 ```
 
-- `use`：将需要开启的评论系统的名称填入，例如 `disqusjs`。
+- `use`: Enter the name of the comment system that needs to be enabled, such as `disqusjs`.
 
->   除非你有特别考量，不然我们 **不建议** 同时开启超过 1 个评论服务。
+> Unless you have special considerations, we do NOT recommend enabling more than one comment service at the same time.
 
 ### Disqus
 
 [https://disqus.com/](https://disqus.com/)
 
-「Cards」提供两种使用 Disqus 的方式，分别是常规开启与 DisqusJS。
+"Cards" provides two ways to use Disqus, regular enablement and DisqusJS.
 
 ```yaml
 comments: 
@@ -39,12 +37,13 @@ comments:
 ```
 
 如果你决定使用常规模式，只需填写 `shortname` 即可。如果你还不清楚你的 `shortname` ，可以登陆评论管理后台查看。
+If you decide to use the regular mode, simply fill in `shortname`. If you are not sure what your `shortname` is, you can log in to [Disqus management backend](https://admin.disqus.com) to check.
 
 ![](/assets/img/disqus-shortname.png)
 
 ### DisqusJS
 
-由于 Disqus 在某些地区访问困难，可以选择使用 DisqusJS 更好地加载 Disqus 评论。
+Since Disqus is difficult to access in some regions, you can choose to use DisqusJS to better load Disqus comments.
 
 ```yaml
 comments: 
@@ -60,13 +59,13 @@ comments:
     nesting: 2
 ```
 
-你可以前往 [DisqusJS - README](https://github.com/SukkaW/DisqusJS/blob/master/README.md) 了解相关参数细节。
+You can go to [DisqusJS - README](https://github.com/SukkaW/DisqusJS/blob/master/README.md) to learn about the relevant parameter details.
 
 ### Valine
 
 [https://valine.js.org](https://valine.js.org/)
 
-Valine，一款基于 LeanCloud 的评论系统。
+Valine, a commenting system based on LeanCloud.
 
 ```yaml
 comments: 
@@ -92,13 +91,13 @@ comments:
     emojiMaps: 
 ```
 
-你可以阅读 Valine 文档中的 [快速开始](https://valine.js.org/quickstart.html) 与 [配置项](https://valine.js.org/configuration.html) 了解相关参数细节。一般情况下，你只需要一个 LeanCloud 账号即可。
+You can read the [Quick Start](https://valine.js.org/quickstart.html) and [Configuration](https://valine.js.org/configuration.html) in the Valine document to learn about the relevant parameter details. In general, you only need a LeanCloud account.
 
 ### MiniValine
 
 [https://github.com/MiniValine/MiniValine](https://github.com/MiniValine/MiniValine) 
 
-MiniValine，一款基于 LeanCloud 的轻量级评论系统。
+MiniValine, a lightweight commenting system based on LeanCloud.
 
 ```yaml
 comments: 
@@ -126,13 +125,13 @@ comments:
     serverURLs: 
 ```
 
-你可以阅读 MiniValine 文档中的 [Opinions](https://github.com/MiniValine/MiniValine#options) 了解相关配置项。一般情况下，你只需要一个 LeanCloud 账号即可。
+You can refer to the "[Options](https://github.com/MiniValine/MiniValine#options)" section of the MiniValine documentation to learn about relevant parameter details. In general, you only need a LeanCloud account to use MiniValine.
 
 ### Artalk
 
 [https://github.com/qwqcode/Artalk](https://github.com/qwqcode/Artalk) 
 
-Artalk，一款简洁有趣的自托管评论系统。
+Artalk is a concise and interesting self-hosted commenting system.
 
 ```yaml
 comments: 
@@ -152,7 +151,7 @@ comments:
     emoticons: 
 ```
 
-你可以阅读 [Artalk 文档](https://github.com/qwqcode/Artalk) 了解相关配置项。
+You can refer to the [Artalk document](https://artalk.js.org/en/) to learn about related configuration options.
 
 ### Gitalk
 
@@ -169,7 +168,7 @@ comments:
     clientSecret:
 ```
 
-你可以阅读 Gitalk 文档中的 [Options](https://github.com/gitalk/gitalk/blob/master/readme-cn.md#%E8%AE%BE%E7%BD%AE) 了解相关参数细节。该插件需要使用 **GitHub Application**，如果还未创建请 [点击这里](https://github.com/settings/applications/new) 申请。
+You can refer to the "[Options](https://github.com/gitalk/gitalk#options)" section of the Gitalk document to learn about related parameter details. This plugin requires GitHub Application. If you have not created one yet, please [apply here](https://github.com/settings/applications/new).
 
 ### Gitment
 
@@ -186,7 +185,7 @@ comments:
     client_secret:
 ```
 
-你可以阅读 [Gitment 文档](https://github.com/imsun/gitment#3-render-gitment) 了解相关参数细节。该插件需要使用 **GitHub Application**，如果还未创建请 [点击这里](https://github.com/settings/applications/new) 申请。
+You can refer to the [Gitment document](https://github.com/imsun/gitment#3-render-gitment) to learn about related parameter details. This plugin requires GitHub Application. If you have not created one yet, please [apply here](https://github.com/settings/applications/new).
 
 ### 来必力
 
@@ -200,7 +199,7 @@ comments:
     livere_uid:
 ```
 
-「Cards」内置了 `ciry_version` 版本的来必力，该版本是免费的。你可以在 Livere 管理后台获取 UID。
+"Cards" has the free version of LiveRe, `ciry_version`, built in. You can obtain the UID from the LiveRe management background.
 
 ### 畅言
 
@@ -216,7 +215,7 @@ comments:
     thread_key_type: path 
 ```
 
-你可以在畅言后台安装方式找到你的 `appid` 与 `conf`。而 `thread_key_type` 为页面区分参数，默认使用页面路径区分。如果你经常更改链接，也可以在每篇文章的 `front-matter` 中自定义一个参数来区分，例如：
+You can find your `appid` and `conf` in the installation method in the Changyan background. `thread_key_type` is the page differentiation parameter, which defaults to using the page path for differentiation. If you often change links, you can also customize a parameter in the `front-matter` of each article to differentiate, for example:
 
  ```yaml
 // front-matter of each post
@@ -255,25 +254,25 @@ comments:
     locale: en
 ```
 
-你可以阅读 [官方文档](https://wildfire.js.org/#/zh-cn/) 了解参数细节及如何使用。
+You can refer to the [official documentation](https://wildfire.js.org) to learn about related parameter details.
 
 ### Twikoo
 
 [https://twikoo.js.org/](https://twikoo.js.org/) 
 
-Twikoo，一款基于 [腾讯云 CloudBase](https://cloudbase.net/) 的评论系统。
+Twikoo, a comment system based on [Tencent CloudBase](https://cloudbase.net/).
 
 ```yaml
 comments:
   use: twikoo
   
   twikoo:
-    envId:  # 你的 CloudBase 环境 ID
+    envId:  # Your CloudBase ID
 ```
 
-你可以阅读 Twikoo 文档 [快速上手](https://twikoo.js.org/quick-start.html#%E4%BA%91%E5%87%BD%E6%95%B0%E9%83%A8%E7%BD%B2) 部分了解如何配置 Cloudbase 云函数 。一般情况下，你只需要一个 CloudBase 免费应用即可。
+You can refer to the [Quick Start](https://twikoo.js.org/en/quick-start.html) to learn about related parameter details. In general, you only need a CloudBase free account. 
 
-## 数据统计服务
+## Web Statistics Service
 
 ### Google Analytics
 
@@ -285,7 +284,7 @@ analytics:
   gtags_site_id: 
 ```
 
-登陆 Google Analytics 后，前往「设置 - 跟踪信息 - 跟踪代码」处获取 **跟踪 ID**。Google 提供两种跟踪方式，分别 `google_site_id` 传统跟踪，或 `gtags_site_id` 新统计方式。后者需要请求更大的文件，可能会对页面加载有一定影响。
+After logging into Google Analytics, step to "Settings - Tracking Info - Tracking Code" to obtain your Tracking ID. Google provides two tracking methods: `google_site_id` for traditional tracking, or `gtags_site_id` for the new tracking method. The latter may require a larger file request, which could have some impact on page performance.
 
 ### 百度统计
 
@@ -316,13 +315,13 @@ analytics:
 
 [https://web.umeng.com](https://web.umeng.com/) 
 
-CNZZ 已被友盟收购，登陆后台找到代码安装页面。
+CNZZ has been acquired by Umeng. After logging into the Umeng backend, go to the code installation page to obtain your tracking code.
 
 ```html
-<script src="//s95.cnzz.com/z_stat.php?id=[ 跟踪 ID ]&web_id=[ 跟踪 ID ]" language="JavaScript"></script>
+<script src="//s95.cnzz.com/z_stat.php?id=[ Traching ID ]&web_id=[ Traching ID ]" language="JavaScript"></script>
 ```
 
-将该 ID 设置到 `cnzz_site_id` 中。
+Then set the obtained Tracking ID to `cnzz_site_id`.
 
 ```yaml
 analytics: 
@@ -334,7 +333,7 @@ analytics:
 
 [https://support.cloudflare.com/hc/en-us/articles/360052685432-Cloudflare-Web-Analytics](https://support.cloudflare.com/hc/en-us/articles/360052685432-Cloudflare-Web-Analytics) 
 
-Cloudflare Web Analytics，Cloudflare 提供的*免费、隐私优先*的统计服务（无需替换 Cloudflare DNS 解析或接入 Cloudflare CDN）。
+Cloudflare Web Analytics is a *free, privacy-first* statistics service offered by Cloudflare (no need to replace Cloudflare DNS resolution or access Cloudflare CDN).
 
 ```yaml
 analytics: 
@@ -342,6 +341,6 @@ analytics:
   cloudflare_site_id: 
 ```
 
-在提示你插入的 JS 片段中找到 `token`，那便是你的 `cloudflare_site_id`。
+Find your `cloudflare_site_id` in the JS snippet provided to you, which should include a `token`.
 
 ![](/assets/img/cloudflare-web-analytics-setup.png)
