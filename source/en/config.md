@@ -342,16 +342,6 @@ statistics:
     after_text: Views 
 ```
 
-- `use`：选择计数系统（目前支持 LeanCloud、不蒜子）
-- `leancloud`：选择使用 LeanCloud 所需完善的配置项
-- `site_uv`/`site_pv`：全站 Unique Viewers/Page Views
-  - `before_text`：展示在数据前的内容，支持 HTML
-  - `after_text`：展示在数据后的内容，支持 HTML
-  - `divider`：分隔符，支持 HTML
-- `page_pv`：单个页面访问数
-  - `before_text`：展示在数据前的内容，支持 HTML
-  - `after_text`：展示在数据后的内容，支持 HTML
-
 - use: Choose the statistics system (currently supports LeanCloud and Busuanzi).
 - leancloud: Additional configuration items required for using LeanCloud.
 - site_uv/site_pv: Unique viewers and page views for the entire website.
