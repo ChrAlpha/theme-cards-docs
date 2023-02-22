@@ -1,19 +1,19 @@
 ---
-title: 拓展插件
+title: Expansion Plugins
 type: docs
-permalink: expand/
-date: 2020-04-24 10:30:20
+permalink: en/expand/
+date: 2023-02-22 20:30:20
 ---
 
 
 
-## 代码高亮
+## Code Highlight
 
-Hexo 内置两款代码高亮插件——highlight.js 与 prismjs，而 highlight.js 又分为 Hexo 定制 highlight.js 与原生 highlight.js。这样就对应三个版本：Hexo 定制 highlight.js（`highlight`）、原生 highlight.js（`hljs`）与 prismjs（`prismjs`）。
+Hexo comes with two built-in code highlighting plugins - highlight.js and prismjs. highlight.js is further divided into customized highlight.js for "Cards" and the original highlight.js. This corresponds to three versions: customized highlight.js for "Cards" (`highlight`), original highlight.js (`hljs`), and prismjs (`prismjs`).
 
 ### highlight
 
-在**站点配置文件**中配置 [`highlight`](https://hexo.io/zh-cn/docs/syntax-highlight#config-yml) 字段。请确保 `enable` 为 `true` 且 `hljs` 为 `false`，并将 `primsjs.enable` 设为 `false`。
+Configure the [highlight](https://hexo.io/docs/syntax-highlight#config-yml) in the **site configuration file**. Make sure that `enable` is set to `true`, `hljs` is set to `false`, and `prismjs.enable` is set to `false`.
 
 ```
 highlight:
@@ -30,9 +30,9 @@ prismjs:
   tab_replace: ''
 ```
 
-Hexo 定制 highlight.js 是无法直接使用 highlight.js 主题的，为此「Cards」主题定制了 代码高亮主题，并为更贴合主题样式做了些许改动。
+Customized highlight.js for Hexo cannot be used directly with highlight.js themes. Therefore, "Cards" has customized code highlighting themes to fit better with the overall style.
 
-由于许多代码高亮主题在亮色/暗色模式下可读性差异较大，在主题配置文件 `style` 字段下可以分别设置亮色/暗色模式下使用的代码高亮主题。
+Since the readability of many code highlighting themes varies greatly between light/dark mode, the code highlighting theme used in each mode can be set separately under the `style` in the **theme configuration file**.
 
 ```yaml
 style: 
@@ -42,14 +42,14 @@ style:
     darkmode: 
 ```
 
-- `default`：默认代码高亮主题
-- `darkmode`：暗色模式下代码高亮主题
+- `default`: default code highlighting theme
+- `darkmode`: code highlighting theme used in dark mode
 
-这里只需填入代码高亮主题的名称，无需填入路径、后缀等，「Cards」在请求时会将其补全。而在 `vendors.highlight` 中可配置存放代码高亮主题的文件夹路径。
+Only the name of the highlight theme needs to be filled in here, and no need to include the path or suffix. "Cards" will automatically complete it when requested. The vendor for highlight themes can be configured in `vendors.highlight`.
 
 ### hljs
 
-在**站点配置文件**中配置 [`highlight`](https://hexo.io/zh-cn/docs/syntax-highlight#config-yml) 字段。请确保 `enable` 与 `hljs` 均为 `true` 且 `line_number` 与 `wrap` 均为 `false`，并将 `primsjs.enable` 设为 `false`。
+Configure the [highlight](https://hexo.io/docs/syntax-highlight#config-yml) in the **site configuration file**. Make sure that `enable` and `hljs` are both set to true, `line_number` and `wrap` are both set to `false`, and `prismjs.enable` is set to `false`.
 
 ```yaml
 highlight:
@@ -66,11 +66,11 @@ prismjs:
   tab_replace: ''
 ```
 
-原生 highlight.js 可以直接使用 highlight.js 提供的 [主题](https://github.com/highlightjs/highlight.js/tree/master/src/styles)。同前者一致，在主题配置文件 `style.hljs` 字段下可以分别设置亮色/暗色模式下使用的代码高亮主题、在 `vendors.hljs` 中可配置存放代码高亮主题的文件夹路径。
+Original highlight.js can use [themes](https://github.com/highlightjs/highlight.js/tree/master/src/styles) provided by highlight.js directly. Similarly, in the theme configuration file, the highlight theme used in each mode can be set separately under the `style.hljs`. The vendor for highlight themes can be configured in `vendors.hljs`.
 
 ### prismjs
 
-在**站点配置文件**中配置 [`prismjs`](https://hexo.io/zh-cn/docs/syntax-highlight#PrismJS) 字段。请确保 `enable` 与 `preprocess` 均为 `true`，并将 `highlight.enable` 设为 `false`。
+Configure the [prismjs](https://hexo.io/docs/syntax-highlight#PrismJS) in the **site configuration file**. Make sure that `enable` and `preprocess` are both set to `true`, and `highlight.enable` is set to `false`.
 
 ```yaml
 highlight:
@@ -87,7 +87,7 @@ prismjs:
   tab_replace: ''
 ```
 
-prismjs 支持直接使用其提供的 [主题](https://github.com/PrismJS/prism/tree/master/themes)。在主题配置文件 `style` 字段下可以分别设置亮色/暗色模式下使用的代码高亮主题。
+prismjs supports using themes provided by itself directly. In the **theme configuration file**, the highlight theme used in each mode can be set separately under the `style.prismjs`.
 
 ```yaml
 style: 
@@ -97,14 +97,14 @@ style:
     darkmode: 
 ```
 
-- `default`：默认代码高亮主题
-- `darkmode`：暗色模式下代码高亮主题
+- `default`: default code highlighting theme
+- `darkmode`: code highlighting theme used in dark mode
 
-同样的，这里只需填入代码高亮主题的名称，无需填入路径、后缀等，「Cards」在请求时会将其补全。而在 `vendors.prismjs` 中可配置存放代码高亮主题的文件夹路径。
+Similarly, only the name of the highlight theme needs to be filled in here, without the need to specify the path or suffix. "Cards" will automatically complete it when making the request. The vendor for highlight themes can be configured in `vendors.prismjs`.
 
-## 数学公式
+## MathJax
 
-在需要渲染数学公式的文章 `front-matter` 中添加：
+Add the following `front-matter` to any article that requires mathematical formula rendering:
 
 ```yaml
 ---
@@ -112,13 +112,13 @@ mathjax: true
 ---
 ```
 
->   如果你之前有更换过渲染器，请根据自身实际情况调整。
+> If you have changed the renderer, adjust according to your actual situation.
 
-## 图片懒加载
+## Image Lazyload
 
-「Cards」内置图片 Lazyload 插件，为避免冲突请勿安装其他插件。
+"Cards" comes with a Lazyload plugin for images. To avoid conflicts, do not install other plugins.
 
-从「Cards」v1.1.0 开始，**你无需将 `lazyload` 配置项移动至站点配置文件，直接修改主题配置文件便可使相关配置生效。**
+Starting from "Cards" v1.1.0, you do NOT need to move the lazyload configuration to the **site configuration file**. You can directly modify the **theme configuration file** to make the relevant configuration effective.
 
 ```yaml
 lazyload:
@@ -127,14 +127,14 @@ lazyload:
   loadingImage: 
 ```
 
-- `onlypost`: 仅在文章页面启用图片懒加载
-- `loadingImage`：懒加载占位图
+- `onlypost`: Enable image lazyload only on article pages
+- `loadingImage`: Placeholder image for lazyload
 
-## 站内搜索
+## Local Search
 
-「Cards」主题内置了站内搜索功能，为避免冲突请勿安装其他插件。在启用之前你需要为其单独 [生成一个页面](/pages/#搜索页面)。
+"Cards" has a built-in site search function. To avoid conflicts, do not install other plugins. Before enabling it, you need to [generate a separate page](/pages/#Search) for it.
 
-从「Cards」v1.1.0 开始，**你无需将 `search` 配置项移动至站点配置文件，直接修改主题配置文件便可使相关配置生效。**
+Starting from "Cards" v1.1.0, you do NOT need to move the search configuration to the **site configuration file**. You can directly modify the **theme configuration file** to make the relevant configuration effective.
 
 ```yaml
 search:
@@ -143,34 +143,32 @@ search:
   field: All
 ```
 
-- `path`：生成网站数据库路径
-- `field`：数据获取范围（Page | Post | All）
+- `path`: Path to the generated website database
+- `field`: Data acquisition range (Page | Post | All)
 
-## 标签插件
+## Tag Plugin
 
-标签插件，丰富引用块样式。
+The Tag plugin enriches the style of quote block.
 
 ```
 note: true
 ```
 
-在文章中使用此插件：
+To use this plugin in an article:
 
 ```
-{% note [ type ] 自定义小标题 %}
+{% note [ type ] Title %}
 
-自定义正文
+Main content
 
 {% endnote %}
 ```
 
-其中 `[ type ]` 可选填：`info`、`important`、`tip`、`caution`、`warning`，分别对应 5 种样式。
+`[ type ]` is optional and can be filled with `info`, `important`, `tip`, `caution`, or `warning`, corresponding to five different styles. You can go to the [theme demo](/demo/2020/06/tag-plugin-note/) to see the style preview.
 
-可前往 [主题 Demo](/demo/) 查看 [样式预览](/demo/2020/06/tag-plugin-note/)。
+## Content Folding
 
-## 内容折叠插件
-
-通过内容折叠插件折叠文章内任一内容片段。
+Use the Content Folding plugin to fold any content section within an article.
 
 ```yaml
 fold: 
@@ -179,32 +177,32 @@ fold:
   motion: 
 ```
 
-- `summary`：默认折叠标题
-- `motion`：折叠/展开时添加纵向滑动动画
+- `summary`: default folding title
+- `motion`: adds a vertical slide animation when folding/unfolding
 
-在文章中使用本插件：
+To use this plugin in an article:
 
 ```
-{% fold 折叠摘要 %}
+{% fold Summary %}
 
-自定义正文
+Content
 
 {% endfold %}
 ```
 
-如果你希望某一折叠框默认展开：
+If you want a folding box to be expanded by default:
 
 ```
-{% fold open, 折叠摘要 %}
+{% fold open, Summary %}
 
-自定义正文
+Content
 
 {% endfold %}
 ```
 
-## fancybox
+## fancyBox
 
-图片点击放大插件，可以前往 Demo 中的图片测试页面查看效果。由于「Cards」定制了自己的 Lazyload 功能，所以即便开启图片懒加载也能很好地兼容 fancybox。此插件依赖 jQuery。
+fancyBox is a jQuery lightbox script for displaying images, videos and more when touched. You can go to the Demo page for images to test its effect. Since "Cards" has customized its own Lazyload function, even if you enable image lazyload, Fancybox can still be well compatible with it.
 
 ```yaml
 fancybox: 
@@ -212,7 +210,7 @@ fancybox:
   auto: false
 ```
 
-设置 `enable: true` 开启 fancybox。默认不应用到所有图片，请在需要使用 fancybox 的包裹在 `<fancybox>` 标记内，例如：
+Setting `enable: true` enables fancyBox. By default, it is not applied to all images. To apply fancyBox to a specific image, wrap it with the `<fancybox>` tag, for example:
 
 ```
 <fancybox>
@@ -220,19 +218,19 @@ fancybox:
 </fancybox>
 ```
 
-而如果将 `auto: true` 开启，则自动应用到所有图片，无需包裹在 `<fancybox>` 内。
+If you set `auto: true`, it will be automatically applied to all images without the need to wrap them in the `<fancybox>` tag.
 
-## 返回顶部
+## Back to Top
 
-返回顶部按钮。
+The Back to Top button.
 
 ```yaml
 back_to_top: true
 ```
 
-## 暗色模式
+## Dark Mode
 
-暗色模式，通过访问者终端 `prefers-color-scheme` 参数控制，亦添加手动切换按钮。
+Dark mode, controlled by the visitor's terminal `prefers-color-scheme` parameter, also adds a manual switch button.
 
 ```yaml
 darkmode: true
