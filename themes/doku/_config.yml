@@ -17,6 +17,16 @@ navbar:
       - logo: 
         text: '主题 Demo'
         url: 'https://theme-cards.ichr.me/demo/'
+    en:
+      - logo: fab fa-github
+        text: 'Source Code'
+        url: 'https://github.com/ChrAlpha/hexo-theme-cards'
+      - logo: 
+        text: 'Document'
+        url: 'https://github.com/ChrAlpha/theme-cards-docs'
+      - logo: 
+        text: 'Theme Demo'
+        url: 'https://theme-cards.ichr.me/demo/'
 
 # --------------------
 # Sidebar Items
@@ -33,6 +43,21 @@ sidebar:
         - 进阶使用 | expert/
         - 独立页面 | pages/
         - 开始创作 | write/
+    changelog: # 另一个文档类型，以下配置的侧边栏内容只会在 zh-CN 语言、类型为「changelog」的页面下显示
+      level: 1 # 一级侧边栏
+      items:
+        - 0.1.0 | changelog/newest.html # 一级侧边栏不包括子菜单，只包括链接
+  en: # Language
+    docs: # Type bname
+      level: 1 # 1 or 2
+      items:
+        - Start | en/start/
+        - Config | en/config/
+        - Third Party | en/third-party/
+        - Expansion Plugins | en/expand/
+        - Advanced Using | en/expert/
+        - Pages | en/pages/
+        - Writing | en/write/
     changelog: # 另一个文档类型，以下配置的侧边栏内容只会在 zh-CN 语言、类型为「changelog」的页面下显示
       level: 1 # 一级侧边栏
       items:

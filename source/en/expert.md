@@ -1,7 +1,8 @@
 ---
 title: 进阶使用
 type: docs
-permalink: expert/
+permalink: en/expert/
+lang: en
 date: 2020-06-13 14:30:08
 ---
 

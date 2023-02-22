@@ -8,7 +8,9 @@ subtitle: ''
 description: ''
 keywords:
 author: 
-language: zh-CN
+language:
+  - zh-CN
+  - en
 timezone: ''
 
 # URL

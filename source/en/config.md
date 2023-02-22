@@ -2,6 +2,7 @@
 title: Configuration
 type: docs
 permalink: en/config/
+lang: en
 date: 2020-04-24 10:30:08
 ---
 

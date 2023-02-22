@@ -38,7 +38,7 @@
             </div>
             <!-- i18n switch -->
             <div class="navbar-end">
-                <!--<div class="navbar-item">
+                <div class="navbar-item">
                     <div class="dropdown is-right is-hoverable">
                         <div class="dropdown-trigger">
                             <button class="button" id="navbar-i18n-btn">
@@ -53,22 +53,16 @@
                         </div>
                         <div class="dropdown-menu">
                             <div class="dropdown-content">
-                                <a href="#" class="dropdown-item">
-                                    Dropdown item
+                                <a href="<%- url_for(page.path).indexOf('/en/') === -1 ? url_for(page.path).replace('index.html', '') : url_for(page.path).replace('en/', '').replace('index.html', '') %>" class="dropdown-item">
+                                    简体中文
                                 </a>
-                                <a class="dropdown-item">
-                                    Other dropdown item
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Active dropdown item
-                                </a>
-                                <a href="#" class="dropdown-item">
-                                    Other dropdown item
+                                <a href="<%- url_for(page.path).indexOf('/en/') === -1 ? url_for('/en/' + page.path).replace('index.html', '') : url_for(page.path).replace('index.html', '') %>" class="dropdown-item">
+                                    English
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </div>

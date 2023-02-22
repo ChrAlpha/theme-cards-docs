@@ -2,6 +2,7 @@
 title: Expansion Plugins
 type: docs
 permalink: en/expand/
+lang: en
 date: 2023-02-22 20:30:20
 ---
 
