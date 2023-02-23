@@ -3,7 +3,7 @@ title: Advanced Using
 type: docs
 permalink: en/expert/
 lang: en
-date: 2020-06-13 14:30:08
+date: 2023-02-23 14:30:08
 ---
 
 ## Using Git With Hexo
@@ -84,7 +84,6 @@ To configure this, modify the `vendors` in the theme configuration file.
 
 ### style
 
-主题默认 CSS 文件，如果你有自定义 `style` ，请务必替换为相应的 CDN 地址或者将此项留空。
 Theme "Cards" default CSS. If you have modified 
 
 **jsDelivr**

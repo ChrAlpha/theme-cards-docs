@@ -133,7 +133,7 @@ lazyload:
 
 ## Local Search
 
-"Cards" has a built-in site search function. To avoid conflicts, do not install other plugins. Before enabling it, you need to [generate a separate page](/pages/#Search) for it.
+"Cards" has a built-in site search function. To avoid conflicts, do not install other plugins. Before enabling it, you need to [generate a separate page](/en/pages/#Search-Page) for it.
 
 Starting from "Cards" v1.1.0, you do NOT need to move the search configuration to the **site configuration file**. You can directly modify the **theme configuration file** to make the relevant configuration effective.
 

@@ -3,7 +3,7 @@ title: Pages
 type: docs
 permalink: en/pages/
 lang: en
-date: 2020-04-24 10:30:12
+date: 2023-0-23 10:30:12
 ---
 
 
@@ -121,7 +121,6 @@ It is not recommended to use other paths, as this may require modification of th
 
 ## Artitalk
 
-「Cards」主题内置了 [Artitalk](https://github.com/ArtitalkJS/Artitalk) 组件，在新增页面 `front-matter` 中加入以下内容，即定义此页面为说说页面。
 The "Cards" theme comes with the Artitalk component, and you can define a page as the Artitalk page by adding the following content to its `front-matter`.
 
 ```yaml

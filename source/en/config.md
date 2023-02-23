@@ -3,7 +3,7 @@ title: Configuration
 type: docs
 permalink: en/config/
 lang: en
-date: 2020-04-24 10:30:08
+date: 2022-02-23 10:30:08
 ---
 
 
@@ -218,7 +218,6 @@ updated:
 
 ### thumbnail
 
-文章缩略图，可在页面 `front-matter` 中通过 `thumbnail` 字段请求缩略图。当页面未被设置 `thumbnail` 字段时将自动回退至默认缩略图（`default`）。
 The thumbnail image for the article. `thumbnail` can be set in the `front-matter` of an article. If no `thumbnail` is set, the `default` will be used.
 
 If the [asset folder](https://hexo.io/docs/asset-folders) has been set up, set `relative` to `true` to ensure that the thumbnail image can be obtained correctly on the home page and other pages.

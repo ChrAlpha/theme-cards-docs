@@ -3,7 +3,7 @@ title: Third Party Services
 type: docs
 permalink: en/third-party/
 lang: en
-date: 2020-04-24 10:30:16
+date: 2023-02-23 10:30:16
 ---
 
 
@@ -37,7 +37,6 @@ comments:
     shortname: 
 ```
 
-如果你决定使用常规模式，只需填写 `shortname` 即可。如果你还不清楚你的 `shortname` ，可以登陆评论管理后台查看。
 If you decide to use the regular mode, simply fill in `shortname`. If you are not sure what your `shortname` is, you can log in to [Disqus management backend](https://admin.disqus.com) to check.
 
 ![](/assets/img/disqus-shortname.png)
