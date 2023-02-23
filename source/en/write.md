@@ -1,41 +1,41 @@
 ---
-title: 开始创作
+title: Start Writing
 type: docs
 permalink: en/write/
 lang: en
-date: 2020-04-24 10:30:23
+date: 2023-02-23 10:30:23
 ---
 
 
 
-## 创建文章
+## Creating a New Post
 
-建议使用命令行创建文章，这样便无需在意许多细节。
+It is recommended to use the command line to create a new post, which frees you from worrying about many details.
 
 ```bash
 hexo new "[ title ]"
 ```
 
-这样便会在站点目录下 `source/_posts` 目录新建 `.md` 文件。
+This will create a new `.md` file in the `source/_posts/` directory of your site.
 
-当然你也可以在相应位置手动创建，不过此时你需要手动配置 `front-matter` 。
+Of course, you can also create the file manually, but then you will need to manually configure the `front-matter`.
 
 ## Front-matter
 
-建议先阅读 [Hexo 官方文档 - Front-Matter](https://hexo.io/zh-cn/docs/front-matter.html) ，「Cards」在其基础上新增了：
+It is recommended to first read the [Hexo Official Document - Front-Matter](https://hexo.io/docs/front-matter.html). "Cards" support the following parameters:
 
-| 参数      | 描述            | 默认值 | 是否必要 |
+| Key      | Description           | Default | Required |
 | --------- | --------------- | ------ | -------- |
-| thumbnail | 文章缩略图地址  | 无     | 非必要   |
-| robots    | 爬虫声明（SEO） | 无     | 非必要   |
-| toc       | 文章目录展示    | true   | 非必要   |
+| thumbnail | Post thumbnail URL  | none     | Optional   |
+| robots    | Spider directive (SEO)	 | none     | Optional   |
+| toc       | Show table of contents	    | true   | Optional   |
 
-## 编辑/发布
+## Editing/Publishing
 
-新建一篇文章后，前往 `source/_posts/` 找到该文件，编辑好内容先 `hexo s` 本地预览，修改妥当后 `hexo d` 部署到远程仓库中。你可以参考 [Hexo 官方文档 - 一键部署](https://hexo.io/zh-cn/docs/one-command-deployment.html) 了解更多。
+After creating a new post, find the file in `source/_posts/`, edit the content, preview it locally with `hexo s`, and deploy it to the remote repository with `hexo d` after making appropriate modifications. You can refer to the [Hexo Official Document - One Command Deployment](https://hexo.io/docs/one-command-deployment.html) for more information.
 
 ---
 
-## 尾声
+## Finale
 
-至此主题相关配置便告一段落了。主题配置妥帖之后你需要注意，就像「Cards」一直试图表达的，专注于内容输出而非沉溺在无尽的折腾中。我们迫不及待地想与你借助「Cards」建立的站点相遇！
+That's it for configuring the theme. After you have configured it properly, you should remember to focus on outputting content rather than getting lost in endless tinkering, as "Cards" has always tried to convey. We can't wait to see the site you build with "Cards"!
