@@ -1,5 +1,5 @@
 ---
-title: 独立页面
+title: Pages
 type: docs
 permalink: en/pages/
 lang: en
@@ -8,9 +8,9 @@ date: 2020-04-24 10:30:12
 
 
 
-## 文章页面
+## Article
 
-在新增页面 `front-matter` 中添加以下内容，即定义此页面为文章页面。
+To define a page as an article page, add the following content to the `front-matter` of the new page:
 
 ```yaml
 ---
@@ -18,19 +18,19 @@ layout: post
 ---
 ```
 
-若无此条目，则根据站点配置文件中 `default_layout` 决定页面种类（一般为 `post`）。
+If this parametre is undefined or null, the page type will be determined based on the `default_layout` entry in the site configuration file (usually `post`).
 
-仅在文章页面中，你不会看到 Cover 封面。
+Only on article pages, the cover will not be displayed.
 
-## 标签云
+## Tag Cloud
 
-一般情况下，我们希望标签云路径在 `/tags/` 下（除非你更改过主题配置文件中 `tag_dir` 参数），所以要在 `./source/tags/` 文件夹中新建 `index.md`。使用以下命令即可：
+By default, we want the tag cloud path to be under `/tags/` (unless you have changed the `tag_dir` parameter in the theme configuration file), so create a new `index.md` in the `./source/tags/` folder using the following command:
 
 ```bash
 hexo new page "tags"
 ```
 
-在新增页面 `front-matter` 中添加以下内容，即定义此页面为标签页面。
+To define this page as a tag page, add the following content to the `front-matter` of the new page:
 
 ```yaml
 ---
@@ -38,37 +38,19 @@ layout: tag
 ---
 ```
 
-在标签页面将展示所有文章包含的所有标签，点击对应标签会展示该标签下所有文章。
+The tag page will display all tags included in all articles, and clicking on the corresponding tag will display all articles under that tag.
 
-## 分类一览
+## Archive
 
-一般情况下，我们希望分类页面路径在 `/categories/` 下（除非你更改过主题配置文件中 `categories_dir` 参数），所以要在 `./source/categories/` 文件夹中新建 `index.md`。使用以下命令即可：
+By default, Hexo archives articles by publication date, under `/archives/`. In addition, Hexo will also archive articles by month and year. For example, an article published on April 30, 2020 will be archived under `/archives/`, `/archives/2020/`, and `/archives/2020/04/`.
 
-```bash
-hexo new page "categories"
-```
+## Friends Link
 
-在新增页面 `front-matter` 中添加以下内容，即定义此页面为分类页面。
+Create a file with a `.md` suffix under the site source folder, and the filename and path will determine the path after the friends link page is rendered.
 
-```yaml
----
-layout: category
----
-```
+> For example, creating `source/friends/index.md` will be rendered as `/friends/`; while `source/links.md` will be rendered as `/links.html`.
 
-在分类页面将展示所有文章归属的所有分类，点击对应分类会展示该分类下所有文章。
-
-## 文章归档
-
-一般情况下，Hexo 会默认讲文章按照发布日期归档，在 `/archives/` 下。除此以外，Hexo 还会默认将文章 **按月归档** 与 **按年归档**。例如一篇 2020 年 4 月 30 号发布的文章会同时被归档至`/archives/`、`/archives/2020/` 与 `/archives/2020/04/` 页面下。
-
-## 友情链接
-
-在站点 `source` 文件夹下创建一个以 `.md` 为后缀的文件，文件名与路径随意，这会决定友链页面渲染后的路径。
-
->   例如创建 `source/friends/index.md` 则渲染后路径为 `/friends/` ；而 `source/links.md` 则会渲染至 `/links.html` 。
-
-在新增页面 `front-matter` 中添加以下内容，即定义此页面为友链页面。
+To define this page as a friends link page, add the following content to the `front-matter` of the new page:
 
 ```yaml
 ---
@@ -76,7 +58,7 @@ layout: links
 ---
 ```
 
-友链数据可在 `front-matter` 中添加，假如你想添加 ChrAlpha 博客作为友链。
+The friend links data can be added to the `front-matter`. For example, to add ChrAlpha blog as a friend link:
 
 ```
 links: 
@@ -89,17 +71,17 @@ links:
     textColor: '#444'
 ```
 
-- `name`: 友链名称
-- `url`: 友链地址
-- `avatar`: 友链头像
-- `desc`: 友链介绍
-- `target`: 链接打开方式——（默认）`_blank` 新建标签页打开；`_self` 当前标签页打开
-- `backgroundColor`: 友链卡片背景颜色
-- `textColor`: 友链文字颜色
+- `name`: Name of the friend link
+- `url`: URL of the friend link
+- `avatar`: Avatar of the friend link
+- `desc`: Introduction of the friend link
+- `target`: Link opening method: `_blank` opens a new tab (default), `_self` opens in the current tab
+- `backgroundColor`: Background color of the friend link card
+- `textColor`: Text color of the friend link
 
-以上仅 `name`、`url` 两个参数必填，其余参数选填。
+Only `name` and `url` are required. Other parameters are optional.
 
-此外，还可以在此填入文件路径以使用外置 JSON 加载方式。
+In addition, you can also fill in the file path here to use an external JSON.
 
 ```
 links: https://example.com/links.yml
@@ -117,17 +99,17 @@ links: https://example.com/links.yml
   textColor: '#444'
 ```
 
-这样每次访问页面时会根据外置文件在浏览器端生成友链页，方便在不修改站点文件的前提下更新友链页面。
+In this way, the friend link page will be generated on the client-side based on the external file every time the page is accessed, making it easy to update the friend link page without updating site.
 
-## 搜索页面
+## Search Page
 
-「Cards」主题支持 [站内搜索](/expand/#站内搜索)，在此之前需要为它单独创建一个页面。
+"Cards" supports local search and requires a separate page to be created for it.
 
 ```bash
 hexo new page "search"
 ```
 
-在新增页面 `front-matter` 中添加以下内容，即定义此页面为搜索页面。
+Add the following content to the new page's `front-matter` to define it as the search page.
 
 ```yaml
 ---
@@ -135,11 +117,12 @@ layout: search
 ---
 ```
 
-不建议使用其他路径，否则可能需要修改主题源代码才能使其工作。
+It is not recommended to use other paths, as this may require modification of the theme source code to make it work properly.
 
-## 说说页面
+## Artitalk
 
 「Cards」主题内置了 [Artitalk](https://github.com/ArtitalkJS/Artitalk) 组件，在新增页面 `front-matter` 中加入以下内容，即定义此页面为说说页面。
+The "Cards" theme comes with the Artitalk component, and you can define a page as the Artitalk page by adding the following content to its `front-matter`.
 
 ```yaml
 ---
@@ -147,7 +130,7 @@ layout: artitalk
 ---
 ```
 
-此外，你需要将 [Artitalk 配置项](https://artitalk.js.org/settings.html) 填入该页面 `front-matter` 的 `artitalk` 字段下。
+In addition, you need to fill in the [Artitalk configs](https://artitalk.js.org/settings.html) in `artitalk` of the page's `front-matter`.
 
 ```yaml
 artitalk: 
