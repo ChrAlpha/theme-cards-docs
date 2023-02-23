@@ -1,52 +1,52 @@
 ---
-title: 进阶使用
+title: Advanced Using
 type: docs
 permalink: en/expert/
 lang: en
 date: 2020-06-13 14:30:08
 ---
 
-## 使用 Git 管理 Hexo
+## Using Git With Hexo
 
-正如 [开始使用](/start/) 中提到的，我们建议使用 git 获取主题文件，以便第一时间跟进新版本。
+As mentioned in the [Started](/en/start/), we recommend using Git to obtain the theme files so that you can promptly update to new versions.
 
-但是如果你有使用 Git 管理整个站点文件的需求话，需要使用 `git submodule` 避免冲突。
+If you want to manage your entire site with Git, you'll need to use `git submodule` to avoid conflicts.
 
-`git submodule` 允许将另一个仓库克隆至你的项目，同时还保持提交的独立。
+`git submodule` allows you to clone another repository into your Git project while still keeping the commits separate.
 
-1.  获取「Cards」为子模块
+1. Get "Cards" as a submodule
 
     ```bash
     git submodule add https://github.com/ChrAlpha/hexo-theme-cards.git themes/cards
     ```
 
-2.  跟进「Cards」为远程最新版本
+2.  Update "Cards" to the latest version
 
     ```bash
     git submodule update --remote
     ```
 
-这样一来，之后只需要克隆站点仓库便可获取站点文件及主题文件。
+In this way, you only need to clone the site repository to obtain both site and theme files.
 
 ```bash
-git clone --recurse-submodules https://github.com/ChrAlpha/[website source].git
+git clone --recurse-submodules https://github.com/[ GitHub ID ]/[website source].git
 ```
 
-更多关于 `git submodule` 的详细内容可以参考 [Git 文档](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97)。
+For more detailed information on git submodule, please refer to the [Git document](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
-## 平滑更新
+## Smooth Updates
 
-基于 Hexo 3.0 新增「数据文件」特性，无需直接更改主题 `_config.yml` 便可达到相同效果。以此使得主题配置文件的修改可存储与主题文件夹外，方便直接使用 Git 管理主题版本，而无需每次更新手动更改主题配置文件。
+With the addition of [Data Files](https://hexo.io/docs/data-files.html) in Hexo 3.0, you can achieve the same effect as modifying theme `_config.yml` file without directly editing it. This allows for modifications to the theme configuration file to be stored outside of the theme folder, making it easy to manage theme versions with Git without manually changing the theme configuration file each time an update is released.
 
-在**站点根目录**下创建 `source/_data/cards.yml`（若 `source/_data` 目录不存在，请新建）。并将你需要修改的内容填写至此（**无需**复制整个主题配置文件），根据约定，这里的内容将覆盖主题配置文件中对应的内容。
+Create `source/_data/cards.yml` in the **root directory of your site** (if the `source/_data/` does not exist, create it). Enter the content you want to modify here (**without** copying the entire theme configuration file). The content here will overwrite the corresponding content in the theme configuration file.
 
->   此特性从「Cards」v0.5.0 开始支持。
+> This feature is supported from "Cards" v0.5.0 onwards.
 
 {% note success %}
 
-例子：
+Example:
 
-比如你需要修改 opengraph 配置，在主题配置文件中是：
+Suppose you need to modify the OpenGraph configuration. In the theme configuration file, it looks like this:
 
 ```yaml
 head: 
@@ -65,7 +65,7 @@ head:
     fb_app_id: 
 ```
 
-你只需要在 `source/_data/cards.yml` 中添加：
+You only need to add the following to `source/_data/cards.yml`:
 
 ```yaml
 head: 
@@ -78,13 +78,14 @@ head:
 
 ## CDN
 
-使用 CDN 获取所需的静态资源通常能使请求更加快速、稳定。而主题默认采用 [jsDelivr](https://www.jsdelivr.com)~~（国内备案，网宿接入，100 SLA，在全球范围内都有很不错的速度）~~，当然你也可以自行选择其他 CDN。
+Using a CDN to obtain required static resources can often result in faster and more stable requests. "Cards" defaults to using [jsDelivr](https://www.jsdelivr.com), but you can also choose to use another CDN of your choice.
 
-此方面配置请在主题配置文件中定位到 `vendors` 并修改相应配置。
+To configure this, modify the `vendors` in the theme configuration file.
 
 ### style
 
 主题默认 CSS 文件，如果你有自定义 `style` ，请务必替换为相应的 CDN 地址或者将此项留空。
+Theme "Cards" default CSS. If you have modified 
 
 **jsDelivr**
 
@@ -100,7 +101,7 @@ style: https://unpkg.com/hexo-theme-cards@1.4/dist/css/style/main.min.css
 
 ### darkmode
 
-暗色模式样式及切换按钮。
+Dark Mode related vendors
 
 **jsDelivr**
 
@@ -120,9 +121,9 @@ darkmode:
 
 ### highlight
 
-[https://theme-cards.ichr.me/expand/#highlight](/expand/#highlight) 
+[Expansion Plugins - #highlight](/en/expand/#highlight) 
 
-主题定制 highlight 样式。
+Customized highlight.js themes for "Cards".
 
 **jsDelivr**
 
@@ -140,9 +141,9 @@ highlight: https://unpkg.com/hexo-theme-cards@1.4/dist/css/highlight/
 
 [https://highlightjs.org/](https://highlightjs.org/) 
 
-原生 highlight.js 样式。
+Original highlight.js themes.
 
-详见：[https://theme-cards.ichr.me/expand/#hljs](/expand/#hljs) 
+More info：[Expansion Plugins - #hljs](/en/expand/#hljs) 
 
 **jsDelivr**
 
@@ -172,9 +173,9 @@ hljs: https://cdnjs.loli.net/ajax/libs/highlight.js/10.1.2/styles/
 
 [https://prismjs.com/](https://prismjs.com/) 
 
-PrismJS 样式。
+PrismJS theme。
 
-详见：[https://theme-cards.ichr.me/expand/#prismjs](/expand/#prismjs) 
+More Info: [Expansion Plugins - #prismjs](/en/expand/#prismjs) 
 
 **jsDelivr**
 
@@ -197,16 +198,16 @@ prismjs: https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/
 **css.net**
 
 ```yaml
-https://cdnjs.loli.net/ajax/libs/prism/1.21.0/themes/
+prismjs: https://cdnjs.loli.net/ajax/libs/prism/1.21.0/themes/
 ```
 
 ### lazyload
 
 Vanilla-Lazyload 17.1.2 [https://github.com/verlok/lazyload](https://github.com/verlok/lazyload)
 
-主题内置图片 Lazyload 功能，默认调用 Vanilla Lazyload。
+Vanilla Lazyload Plugin 
 
-详见 [https://theme-cards.ichr.me/expand/#Lazyload](/expand/#Lazyload)
+More info: [Expansion Plugins - #Lazyload](/en/expand/#Lazyload)
 
 **jsDelivr**
 
@@ -236,9 +237,9 @@ lazyload: https://cdnjs.loli.net/ajax/libs/vanilla-lazyload/17.1.0/lazyload.min.
 
 [https://github.com/xcss/Valine](https://github.com/xcss/Valine) [https://valine.js.org/](https://valine.js.org/)
 
-Valine 评论系统。
+Valine comment system。
 
-详见 [https://theme-cards.ichr.me/third-party/#Valine](/third-party/#Valine)
+More info: [Third Party Services - #Valine](/en/third-party/#Valine)
 
 **jsDelivr**
 
@@ -268,9 +269,9 @@ valine: https://cdnjs.loli.net/ajax/libs/valine/1.4.14/Valine.min.js
 
 [https://github.com/MiniValine/MiniValine](https://github.com/MiniValine/MiniValine) [https://minivaline.github.io/](https://minivaline.github.io/)
 
-MiniValine 评论系统。
+MiniValine comment system。
 
-详见 [https://theme-cards.ichr.me/third-party/#MiniValine](/third-party/#MiniValine)
+More info: [Third Party Services - #MiniValine](/en/third-party/#MiniValine)
 
 **jsDelivr**
 
@@ -288,9 +289,9 @@ minivaline: https://unpkg.com/minivaline@2.7.5/dist/MiniValine.min.js
 
 [https://github.com/qwqcode/Artalk](https://github.com/qwqcode/Artalk)
 
-Artalk 评论系统。
+Artalk comment system。
 
-详见 [https://theme-cards.ichr.me/third-party/#Artalk](/third-party/#Artalk)。
+More info: [Third Party Services - #Artalk](/en/third-party/#Artalk)。
 
 **jsDelivr**
 
@@ -312,9 +313,9 @@ artalk:
 
 [https://github.com/cheng-kang/wildfire](https://github.com/cheng-kang/wildfire/) [https://wildfire.js.org](https://wildfire.js.org/)
 
-Wildfire 评论系统。
+Wildfire comment system。
 
-详见 [https://theme-cards.ichr.me/third-party/#Wildfire](/third-party/#Wildfire)
+More Info: [Third Party Services - #Wildfire](/en/third-party/#Wildfire)
 
 **jsDelivr**
 
@@ -332,7 +333,7 @@ wildfire: https://unpkg.com/wildfire@0.3.9/dist/wildfire.auto.js
 
 [https://www.mathjax.org/](https://www.mathjax.org/)
 
-MathJax 数学公式渲染。
+MathJax rendering.
 
 **jsDelivr**
 
@@ -362,7 +363,7 @@ mathjax: https://cdnjs.loli.net/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js
 
 [https://katex.org/](https://katex.org/)
 
-KaTeX 数学公式渲染。
+KaTeX rendering。
 
 ```yaml
 katex:
@@ -398,11 +399,9 @@ katex:
 
 [https://busuanzi.ibruce.info](https://busuanzi.ibruce.info)
 
-不蒜子计数系统。
+Busuanzi analytics system
 
-详见 [https://theme-cards.ichr.me/third-party/#不蒜子](/third-party/#不蒜子)
-
->   此项默认从官方 CDN 而非 jsDelivr 加载。
+More Info: [Third Party Services - #Busuanzi](/en/third-party/#Busuanzi)
 
 **官方 CDN**
 
@@ -426,7 +425,7 @@ busuanzi: https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js
 
 [https://github.com/ArtitalkJS/Artitalk](https://github.com/ArtitalkJS/Artitalk) 
 
-基于 Leancloud、可实时发布说说的 JS 组件。
+Leancloud-based JS component for real-time publishing of sayings.
 
 **jsDelivr**
 
@@ -444,7 +443,7 @@ artitalk: https://unpkg.com/artitalk@3.1.2/artitalk.jss
 
 jQuery 3.4.1 [https://github.com/jquery/jquery/](https://github.com/jquery/jquery/) [https://jquery.com/](https://jquery.com/)
 
-详见 [https://theme-cards.ichr.me/expand/#jQuery](/expand/#jQuery) 
+More Info: [Expansion Plugins - #jQuery](/en/expand/#jQuery) 
 
 **jsDelivr**
 
@@ -470,11 +469,11 @@ jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js
 jquery: https://cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js
 ```
 
-### fancybox
+### fancyBox
 
-fancybox 3.5.7 [https://github.com/fancyapps/fancybox/](https://github.com/fancyapps/fancybox/) [https://fancyapps.com/fancybox/3/](https://fancyapps.com/fancybox/3/) 
+fancyBox 3.5.7 [https://github.com/fancyapps/fancybox/](https://github.com/fancyapps/fancybox/) [https://fancyapps.com/fancybox/3/](https://fancyapps.com/fancybox/3/) 
 
-详见 [https://theme-cards.ichr.me/expand/#fancybox](/expand/#fancybox)
+More Info: [Expansion Plugins - #fancyBox](/en/expand/#fancyBox)
 
 **jsDelivr**
 
@@ -510,5 +509,5 @@ fancybox:
 
 ### custom_script
 
-自定义 scripts，将追加至 `</body>` 前。
+Costom scripts that will be appended before `</body>`.
 

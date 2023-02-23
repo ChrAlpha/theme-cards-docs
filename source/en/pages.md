@@ -1,7 +1,7 @@
 ---
 title: 独立页面
 type: docs
-permalink: pages/
+permalink: en/pages/
 lang: en
 date: 2020-04-24 10:30:12
 ---
