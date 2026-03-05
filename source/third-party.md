@@ -200,7 +200,7 @@ comments:
     livere_uid:
 ```
 
-「Cards」内置了 `ciry_version` 版本的来必力，该版本是免费的。你可以在 Livere 管理后台获取 UID。
+「Cards」内置了 `city_version` 版本的来必力，该版本是免费的。你可以在 Livere 管理后台获取 UID。
 
 ### 畅言
 

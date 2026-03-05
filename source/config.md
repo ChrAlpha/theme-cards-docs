@@ -46,7 +46,7 @@ opengraph:
   fb_app_id: 
 ```
 
-### custom_text
+### custom_head
 
 可以在此处随意添加信息，所有内容会被追加到 `<head>` 内，例如搜索引擎所有权验证等。
 
@@ -355,4 +355,3 @@ custom_text:
   # - ''
   # - ''
 ```
-

@@ -18,7 +18,7 @@ layout: post
 ---
 ```
 
-If this parametre is undefined or null, the page type will be determined based on the `default_layout` entry in the site configuration file (usually `post`).
+If this parameter is undefined or null, the page type will be determined based on the `default_layout` entry in the site configuration file (usually `post`).
 
 Only on article pages, the cover will not be displayed.
 
@@ -137,4 +137,3 @@ artitalk:
   appKey: xxx
   serverURL: http://example.com
 ```
-

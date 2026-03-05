@@ -8,7 +8,7 @@ date: 2022-02-23 10:30:08
 
 
 
-Please use VS Code (or Notepad++, Vim, etc) editors to edit theme configuration file. For Windows users, it's NOT recommanded to open configuration files with Windows default notepad, since it may bring unexpected encoding errors.
+Please use VS Code (or Notepad++, Vim, etc.) editors to edit theme configuration files. For Windows users, it's NOT recommended to open configuration files with the default Windows Notepad, since it may cause unexpected encoding errors.
 
 ## Head
 
@@ -35,7 +35,7 @@ You can generate the required favicons [here](https://realfavicongenerator.net/)
 
 ### opengraph
 
-Social sharing protocol that allows certain social media platforms (such as Twitter, Facebook, Telegram, etc.) to automatically generate sharing cards when the article link is sended. It also helps web crawlers to better understand your content.
+Social sharing protocol that allows certain social media platforms (such as Twitter, Facebook, Telegram, etc.) to automatically generate sharing cards when an article link is shared. It also helps web crawlers better understand your content.
 
 ```yaml
 opengraph: 
@@ -49,7 +49,7 @@ opengraph:
   fb_app_id: 
 ```
 
-### custom_text
+### custom_head
 
 You can add any information here, and it will be appended to the `<head>` section. For example, verification tags for search engines console or webmaster tools.
 
@@ -245,7 +245,7 @@ The `duration` is in days. If an article is older than this value, a warning mes
 
 The default article summary. You can (and are recommended to) use the `<!--more-->` tag to specify the portion of the article to be used as the summary.
 
-If you do not set the `<!--more-->` tag and do not specify the description, then the `auto_excerpt` will determine whether intercept a summary of the specified number of words (`length`).
+If you do not set the `<!--more-->` tag and do not specify the description, `auto_excerpt` will determine whether to extract a summary with the specified length (`length`).
 
 ```yaml
 auto_excerpt: 
@@ -361,4 +361,3 @@ custom_text:
   # - ''
   # - ''
 ```
-

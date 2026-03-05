@@ -508,5 +508,4 @@ fancybox:
 
 ### custom_script
 
-Costom scripts that will be appended before `</body>`.
-
+Custom scripts that will be appended before `</body>`.

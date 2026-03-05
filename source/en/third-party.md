@@ -199,7 +199,7 @@ comments:
     livere_uid:
 ```
 
-"Cards" has the free version of LiveRe, `ciry_version`, built in. You can obtain the UID from the LiveRe management background.
+"Cards" has the free version of LiveRe, `city_version`, built in. You can obtain the UID from the LiveRe management background.
 
 ### Changyan
 
@@ -318,7 +318,7 @@ analytics:
 CNZZ has been acquired by Umeng. After logging into the Umeng backend, go to the code installation page to obtain your tracking code.
 
 ```html
-<script src="//s95.cnzz.com/z_stat.php?id=[ Traching ID ]&web_id=[ Traching ID ]" language="JavaScript"></script>
+<script src="//s95.cnzz.com/z_stat.php?id=[ Tracking ID ]&web_id=[ Tracking ID ]" language="JavaScript"></script>
 ```
 
 Then set the obtained Tracking ID to `cnzz_site_id`.

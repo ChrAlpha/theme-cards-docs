@@ -13,7 +13,7 @@ Hexo 内置两款代码高亮插件——highlight.js 与 prismjs，而 highligh
 
 ### highlight
 
-在**站点配置文件**中配置 [`highlight`](https://hexo.io/zh-cn/docs/syntax-highlight#config-yml) 字段。请确保 `enable` 为 `true` 且 `hljs` 为 `false`，并将 `primsjs.enable` 设为 `false`。
+在**站点配置文件**中配置 [`highlight`](https://hexo.io/zh-cn/docs/syntax-highlight#config-yml) 字段。请确保 `enable` 为 `true` 且 `hljs` 为 `false`，并将 `prismjs.enable` 设为 `false`。
 
 ```
 highlight:
@@ -49,7 +49,7 @@ style:
 
 ### hljs
 
-在**站点配置文件**中配置 [`highlight`](https://hexo.io/zh-cn/docs/syntax-highlight#config-yml) 字段。请确保 `enable` 与 `hljs` 均为 `true` 且 `line_number` 与 `wrap` 均为 `false`，并将 `primsjs.enable` 设为 `false`。
+在**站点配置文件**中配置 [`highlight`](https://hexo.io/zh-cn/docs/syntax-highlight#config-yml) 字段。请确保 `enable` 与 `hljs` 均为 `true` 且 `line_number` 与 `wrap` 均为 `false`，并将 `prismjs.enable` 设为 `false`。
 
 ```yaml
 highlight:
